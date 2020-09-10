@@ -13,6 +13,34 @@ import UIKit
  
  */
 
+class Terno {
+    var valorTerno: Float = 400
+    
+    func calcTotalTernos(quantidade: Int) -> [String: Float] {
+        
+        var valorTotal = valorTerno * Float(quantidade)
+        
+        if quantidade >= 3 {
+            
+            valorTotal = valorTotal - (Float(quantidade) * 50)
+
+        }
+        
+        return ["valorTotal": valorTotal, "brinde": 0]
+}
+
+class Vestido {
+    var valorVestido: Float = 900
+    
+    func calcTotalVestidos(quantidade: Int) -> [String: String] {
+        if quantidade == 5 {
+            return valorVestido * Float(quantidade)
+        }
+    }
+}
+
+
+
 public class Vendedor {
     
     private let _nome: String
@@ -30,4 +58,7 @@ public class Vendedor {
     func vender(quantidadeDePecas: Int, tipoDePeca: String) {
         
     }
+    
 }
+
+
