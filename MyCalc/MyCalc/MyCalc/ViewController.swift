@@ -13,11 +13,7 @@ class ViewController: UIViewController {
     
     var firstNumber: String?
     var secondNumber: String?
-    var currentOperation: Operation?
-    
-    enum Operation {
-        case add, subtract, multiply, divide
-    }
+    var currentOperation: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +21,7 @@ class ViewController: UIViewController {
         labelDisplay.text = "0"
     }
     
+    // make statusbar color white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -61,6 +58,10 @@ class ViewController: UIViewController {
         }
     }
     
+    private func handleLabelDisplay(message: String) {
+        labelDisplay.text = message
+    }
+    
     private func checkIfLabelIsZero() -> Bool {
         if labelDisplay.text == "0" {
             return true
@@ -78,9 +79,12 @@ class ViewController: UIViewController {
     }
     
     private func concatNum(numberAsString num: String) {
+        
         if num == "0" && checkIfLabelIsZero() {
            return
         }
+        
+        var display: String = ""
         
         let whichOperator = checkFirstNumberOrSecondNumber()
         
@@ -91,7 +95,7 @@ class ViewController: UIViewController {
                 firstNumber = num
             }
                 
-            labelDisplay.text = firstNumber
+            display = firstNumber ?? ""
             
         }else if whichOperator == 2 {
             
@@ -100,20 +104,136 @@ class ViewController: UIViewController {
             }else {
                 secondNumber = num
             }
-                           
-            labelDisplay.text = secondNumber
+            
+            display = labelDisplay.text ?? ""
+            display = "\(display)\(num)"
+
+        }
+        
+        handleLabelDisplay(message: display)
+        
+    }
+    
+    private func handleDotResult(result: String) -> String {
+        
+        let dotIndex = result.firstIndex(of: ".") ?? result.endIndex
+        let afterDot = result[dotIndex...]
+        let beforeDot = result[..<dotIndex]
+        
+        if afterDot.count <= 3 {
+            if afterDot == ".00" || afterDot == ".0" {
+                return String(beforeDot)
+            }
+            else {
+                return result
+            }
+        }else {
+            if afterDot.count >= 6 {
+                let newAfterDot = String(afterDot.prefix(6))
+                return "\(beforeDot)\(newAfterDot)"
+            }
+            
+            return result
         }
         
     }
     
-    @IBAction func operationBtnPressed(_ sender: Any) {
+    
+    private func doMath() {
+        var operator1: Double = 0
+        var operator2: Double = 0
+        var total: Double = 0
+        
+        if let firstNumber = firstNumber {
+            operator1 = Double(firstNumber)!
+        }
+        
+        if let secondNumber = secondNumber {
+            operator2 = Double(secondNumber)!
+        }
+        
+        switch currentOperation {
+        case "+":
+            total = operator1 + operator2
+        case "-":
+            total = operator1 - operator2
+        case "/":
+            total = operator1 / operator2
+        case "x":
+            total = operator1 * operator2
+        default:
+            labelDisplay.text = "Error"
+            return
+        }
+        
+        handleLabelDisplay(message: handleDotResult(result: String(total)))
+        
+        firstNumber = nil
+        secondNumber = nil
+        currentOperation = nil
+        
     }
     
-    @IBAction func dotBtnPressed(_ sender: Any) {
+    @IBAction func operationBtnPressed(_ sender: UIButton) {
+        
+        var display: String = labelDisplay.text ?? "0"
+        
+        if let btnValue = sender.currentTitle {
+            if btnValue != "=" {
+                if currentOperation == nil {
+                    currentOperation = btnValue
+                }
+                
+                currentOperation = btnValue
+                
+                display = "\(display) \(btnValue) "
+                handleLabelDisplay(message: display)
+                
+            }else {
+                doMath()
+                currentOperation = nil
+            }
+        }
     }
     
+    @IBAction func dotBtnPressed(_ sender: UIButton) {
+        
+        let whichOperator = checkFirstNumberOrSecondNumber()
+        var display: String = ""
+        
+        if whichOperator == 1 {
+            if let firstNumber = firstNumber {
+                if !firstNumber.contains(".") {
+                    self.firstNumber = "\(firstNumber)."
+                }
+            }else {
+                firstNumber = "0."
+            }
+            
+            display = firstNumber ?? ""
     
-    @IBAction func acBtnPressed(_ sender: Any) {
+            
+        }else if whichOperator == 2 {
+            if let secondNumber = secondNumber {
+                if !secondNumber.contains(".") {
+                    self.secondNumber = "\(secondNumber)."
+                }
+            }else {
+                secondNumber = "0."
+            }
+            
+            display = labelDisplay.text ?? ""
+            display = "\(display)\(secondNumber!)"
+            
+        }
+        
+        handleLabelDisplay(message: display)
+    }
+    
+    @IBAction func acBtnPressed(_ sender: UIButton) {
+        firstNumber = nil
+        secondNumber = nil
+        labelDisplay.text = "0"
     }
     
 }
