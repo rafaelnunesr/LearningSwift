@@ -33,8 +33,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.view.backgroundColor = UIColor.red
+
         setButtonSignUp()
         
         textFieldEmail.delegate = self
@@ -44,19 +43,41 @@ class ViewController: UIViewController {
     
     @IBAction func buttonSignUp(_ sender: Any) {
         if validateTextFields() {
-            registerUser(email: textFieldEmail.text ?? "")
+            registerUser(email: textFieldEmail.text!)
         }
     }
     
+    
     private func setButtonSignUp() {
-        buttonSignUp.isEnabled = false
         buttonSignUp.layer.cornerRadius = 8.0
         buttonSignUp.backgroundColor = UIColor.gray
+        disableButtonSignUp()
     }
+    
+    
+    private func disableButtonSignUp() {
+        buttonSignUp.isEnabled = false
+    }
+    
     
     private func enableButtonSignIn() {
         buttonSignUp.isEnabled = true
         buttonSignUp.backgroundColor = UIColor.blue
+    }
+    
+    
+    private func setBackgroundColor(color: String) {
+        
+        switch color {
+        case "white":
+            self.view.backgroundColor = UIColor.white
+        case "red":
+            self.view.backgroundColor = UIColor.red
+        case "green":
+            self.view.backgroundColor = UIColor.green
+        default:
+            self.view.backgroundColor = UIColor.white
+        }
     }
     
     
@@ -79,58 +100,53 @@ class ViewController: UIViewController {
         textFieldPassword.text = ""
     }
     
+    
     private func showAlert(title: String, message: String) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
         let okAction = UIAlertAction(title: "OK", style: .cancel) { (UIAlertAction) in
+            self.setBackgroundColor(color: "white")
         }
         alert.addAction(okAction)
         self.present(alert, animated: true) {
-           
+
         }
+        
     }
     
     
     private func checkIfUserExists(email: String) -> Bool {
-        var x: Int = 0
         
-        print(arrayUsers.count)
-
-        while x < arrayUsers.count {
-            print("user => \(arrayUsers[x].email)")
-            //if email == arrayUsers[x].email {
-              // return true
-            //}
-            
-            x = x + 1
+        for user in arrayUsers {
+            if user.email == email {
+                return true
+            }
         }
         
         return false
     }
     
+    
     private func registerUser(email: String) {
         
-        print("email: \(email)")
         if !checkIfUserExists(email: email) {
-            
-            cleanTextFields()
-            self.view.backgroundColor = UIColor.green
+
+            setBackgroundColor(color: "green")
             showAlert(title: "Bem Vindo", message: "Você acabou de se cadastrar!")
             
-            print(textFieldEmail.text)
             let user = Users(email: textFieldEmail.text!, password: textFieldPassword.text!)
-            print("firstPrint => \(user.email)")
-            
-            arrayUsers.append(Users(email: textFieldEmail.text!, password: textFieldPassword.text!))
+            arrayUsers.append(user)
             
             
         }else {
             
-            cleanTextFields()
-            self.view.backgroundColor = UIColor.red
+            setBackgroundColor(color: "red")
             showAlert(title: "Ops", message: "Você já foi cadastrado!")
         }
+        
+        setButtonSignUp()
+        cleanTextFields()
     }
 
 }
@@ -138,7 +154,7 @@ class ViewController: UIViewController {
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if textField == textFieldEmail {
+        if textField == textFieldEmail && textFieldEmail.text! != "" {
             enableButtonSignIn()
             textFieldPassword.becomeFirstResponder()
         }else {
