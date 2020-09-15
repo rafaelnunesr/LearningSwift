@@ -43,16 +43,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func buttonSignUp(_ sender: Any) {
-    }
-    
-    
-    @IBAction func buttonSignIn(_ sender: Any) {
-        
         if validateTextFields() {
             registerUser(email: textFieldEmail.text ?? "")
         }
     }
-
     
     private func setButtonSignUp() {
         buttonSignUp.isEnabled = false
