@@ -10,15 +10,15 @@ import UIKit
 
 class Users {
     var email: String
-    private var senha: String
+    private var password: String
     
-    init(email: String, senha: String) {
+    init(email: String, password: String) {
         self.email = email
-        self.senha = senha
+        self.password = password
     }
     
-    func getSenha() -> String {
-        return senha
+    func getPassword() -> String {
+        return password
     }
     
 }
@@ -26,8 +26,8 @@ class Users {
 class ViewController: UIViewController {
     
     @IBOutlet weak var textFieldEmail: UITextField!
-    @IBOutlet weak var textFieldSenha: UITextField!
-    @IBOutlet weak var buttonCadastrar: UIButton!
+    @IBOutlet weak var textFieldPassword: UITextField!
+    @IBOutlet weak var buttonSignUp: UIButton!
     
     private var arrayUsers = [Users]()
     
@@ -35,40 +35,45 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //self.view.backgroundColor = UIColor.red
-        setButtonCadastrar()
+        setButtonSignUp()
         
         textFieldEmail.delegate = self
-        textFieldSenha.delegate = self
+        textFieldPassword.delegate = self
     }
     
-    @IBAction func buttonCadastrar(_ sender: Any) {
+    
+    @IBAction func buttonSignUp(_ sender: Any) {
+    }
+    
+    
+    @IBAction func buttonSignIn(_ sender: Any) {
         
-        if validaTextFields() {
-            cadastrarUser(email: textFieldEmail.text ?? "")
+        if validateTextFields() {
+            registerUser(email: textFieldEmail.text ?? "")
         }
     }
+
     
-    // Cadastrar Button
-    private func setButtonCadastrar() {
-        buttonCadastrar.isEnabled = false
-        buttonCadastrar.layer.cornerRadius = 8.0
-        buttonCadastrar.backgroundColor = UIColor.gray
+    private func setButtonSignUp() {
+        buttonSignUp.isEnabled = false
+        buttonSignUp.layer.cornerRadius = 8.0
+        buttonSignUp.backgroundColor = UIColor.gray
     }
     
-    private func enableCadastrarButton() {
-        buttonCadastrar.isEnabled = true
-        buttonCadastrar.backgroundColor = UIColor.blue
+    private func enableButtonSignIn() {
+        buttonSignUp.isEnabled = true
+        buttonSignUp.backgroundColor = UIColor.blue
     }
     
     
-    private func validaTextFields() -> Bool {
+    private func validateTextFields() -> Bool {
         if textFieldEmail.text == nil || textFieldEmail.text!.isEmpty {
-            alerta(title: "Atenção", message: "Falta o email")
+            showAlert(title: "Atenção", message: "Falta o email")
             return false
         }
         
-        if textFieldSenha.text == nil || textFieldSenha.text!.isEmpty {
-            alerta(title: "Atenção", message: "Falta a senha")
+        if textFieldPassword.text == nil || textFieldPassword.text!.isEmpty {
+            showAlert(title: "Atenção", message: "Falta a senha")
             return false
         }
         
@@ -77,12 +82,11 @@ class ViewController: UIViewController {
     
     private func cleanTextFields() {
         textFieldEmail.text = ""
-        textFieldSenha.text = ""
+        textFieldPassword.text = ""
     }
     
-    private func alerta(title: String, message: String) {
+    private func showAlert(title: String, message: String) {
         
-        // Comeca alerta
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
         let okAction = UIAlertAction(title: "OK", style: .cancel) { (UIAlertAction) in
@@ -91,7 +95,6 @@ class ViewController: UIViewController {
         self.present(alert, animated: true) {
            
         }
-        // Termina alerta
     }
     
     
@@ -112,26 +115,27 @@ class ViewController: UIViewController {
         return false
     }
     
-    private func cadastrarUser(email: String) {
+    private func registerUser(email: String) {
+        
+        print("email: \(email)")
         if !checkIfUserExists(email: email) {
             
-            // tela verde
             cleanTextFields()
             self.view.backgroundColor = UIColor.green
-            alerta(title: "Bem Vindo", message: "Você acabou de se cadastrar!")
+            showAlert(title: "Bem Vindo", message: "Você acabou de se cadastrar!")
             
             print(textFieldEmail.text)
-            let user = Users(email: textFieldEmail.text!, senha: textFieldSenha.text!)
+            let user = Users(email: textFieldEmail.text!, password: textFieldPassword.text!)
             print("firstPrint => \(user.email)")
             
-            arrayUsers.append(Users(email: textFieldEmail.text!, senha: textFieldSenha.text!))
+            arrayUsers.append(Users(email: textFieldEmail.text!, password: textFieldPassword.text!))
             
             
         }else {
-            // tela vermelha
+            
             cleanTextFields()
             self.view.backgroundColor = UIColor.red
-            alerta(title: "Ops", message: "Você já foi cadastrado!")
+            showAlert(title: "Ops", message: "Você já foi cadastrado!")
         }
     }
 
@@ -141,8 +145,8 @@ extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if textField == textFieldEmail {
-            enableCadastrarButton()
-            textFieldSenha.becomeFirstResponder()
+            enableButtonSignIn()
+            textFieldPassword.becomeFirstResponder()
         }else {
             textField.resignFirstResponder()
         }

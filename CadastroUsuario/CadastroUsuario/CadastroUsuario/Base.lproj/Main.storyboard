@@ -36,7 +36,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonCadastrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7r-Og-KvF"/>
+                                    <action selector="buttonSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kj5-nO-4EC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,9 +55,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="buttonCadastrar" destination="XOI-E1-KwH" id="shm-ug-pnN"/>
+                        <outlet property="buttonSignUp" destination="XOI-E1-KwH" id="Xfc-W5-qfy"/>
                         <outlet property="textFieldEmail" destination="QOA-Y7-Lbl" id="1qB-5d-aIp"/>
-                        <outlet property="textFieldSenha" destination="8Yw-2x-YRf" id="GdQ-2o-hAv"/>
+                        <outlet property="textFieldPassword" destination="8Yw-2x-YRf" id="dDK-TL-i5l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
