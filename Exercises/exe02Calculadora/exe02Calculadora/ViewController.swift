@@ -10,83 +10,160 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //MARK: Outlet Numeric Buttons
-    @IBOutlet weak var buttonZero: UIButton!
-    @IBOutlet weak var buttonOne: UIButton!
-    @IBOutlet weak var buttonTwo: UIButton!
-    @IBOutlet weak var buttonThree: UIButton!
-    @IBOutlet weak var buttonFour: UIButton!
-    @IBOutlet weak var buttonFive: UIButton!
-    @IBOutlet weak var buttonSix: UIButton!
-    @IBOutlet weak var buttonSeven: UIButton!
-    @IBOutlet weak var buttonEight: UIButton!
-    @IBOutlet weak var buttonNine: UIButton!
-    
-    
-    
-    // MARK:  Action Buttons
-    @IBOutlet weak var acButton: UIButton!
-
-    @IBOutlet weak var divideButton: UIButton!
-    @IBOutlet weak var multiplyButton: UIButton!
+    @IBOutlet weak var sumButton: UIButton!
     @IBOutlet weak var minusButton: UIButton!
-    @IBOutlet weak var plusButton: UIButton!
-    @IBOutlet weak var equalButton: UIButton!
-    @IBOutlet weak var dotButton: UIButton!
+    @IBOutlet weak var divisionButton: UIButton!
+    @IBOutlet weak var multiplyButton: UIButton!
     
+    @IBOutlet weak var totalLabel: UILabel!
     
-    @IBOutlet weak var textFieldResult: UILabel!
+    @IBOutlet weak var textFieldFirstNumber: UITextField!
+    @IBOutlet weak var textFieldSecondNumber: UITextField!
+    
+    var calculator = Calculator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        roundAllButtons()
         
-        roundButtons()
-        
+        textFieldFirstNumber.delegate = self
+        textFieldSecondNumber.delegate = self
     }
+    
+    private func roundAllButtons() {
+        for case let button as UIButton in self.view.subviews {
+            button.layer.cornerRadius = 4
+        }
+    }
+    
+    
+    @IBAction func actionSum(_ sender: Any) {
+        doSum()
+    }
+    
+    @IBAction func actionMinus(_ sender: Any) {
+        doMinus()
+    }
+    
+    @IBAction func actionDivision(_ sender: Any) {
+        doDivision()
+    }
+    
+    
+    @IBAction func actionMultiply(_ sender: Any) {
+        doMultiply()
+    }
+    
+    private func getTextFieldFirstNumberValue() -> Float {
+        var firstOperator: Float = 0
+        
+        if let first = textFieldFirstNumber.text {
+            firstOperator = Float(first)!
+        }
+        
+        return firstOperator
+    }
+    
+    private func getTextFieldSecondNumber() -> Float? {
+        
+        if let second = textFieldSecondNumber.text {
+            return Float(second)!
+        }
+        
+        return nil
+    }
+    
+    private func alert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
-    @IBAction func acButton(_ sender: Any) {
-    }
-    
-    
-    @IBAction func divisionButton(_ sender: Any) {
-    }
-    
-    @IBAction func multiplyButton(_ sender: Any) {
-    }
-    
-    
-    @IBAction func minusButton(_ sender: Any) {
-    }
-    
-    
-    @IBAction func plusButton(_ sender: Any) {
-    }
-    
-    
-    @IBAction func equalButton(_ sender: Any) {
-    }
-    
-}
-
-extension ViewController {
-    
-    func roundButtons() {
-        let radius: CGFloat = 16
+        let okAction = UIAlertAction(title: "OK", style: .cancel) { (UIAlertAction) in
+        }
         
-        buttonZero.layer.cornerRadius = radius
-        buttonOne.layer.cornerRadius = radius
-        buttonTwo.layer.cornerRadius = radius
-        
-        buttonThree.layer.cornerRadius = radius
-        buttonFour.layer.cornerRadius = radius
-        buttonFive.layer.cornerRadius = radius
-        
-        buttonSix.layer.cornerRadius = radius
-        buttonSeven.layer.cornerRadius = radius
-        buttonEight.layer.cornerRadius = radius
-        buttonNine.layer.cornerRadius = radius
+        alert.addAction(okAction)
+        self.present(alert, animated: true) {
+           
+        }
     }
     
+    
+    func textFieldFirstNumberHasValue() -> Bool {
+        if textFieldFirstNumber.isEmpty() {
+            return false
+        }
+    
+        return true
+    }
+    
+    func doSum() {
+        if textFieldFirstNumberHasValue() {
+            
+            let firstOperator: Float = getTextFieldFirstNumberValue()
+            let secondOperator: Float? = getTextFieldSecondNumber()
+            
+            let result = calculator.sum(firstNumber: firstOperator, secondNumber: secondOperator)
+            
+            totalLabel.text = String(result)
+            
+        }else {
+          
+            alert(title: "Error", message: "Inform at least one number")
+            
+        }
+    }
+    
+    func doMinus() {
+        if textFieldFirstNumberHasValue() {
+            
+            let firstOperator: Float = getTextFieldFirstNumberValue()
+            let secondOperator: Float? = getTextFieldSecondNumber()
+            
+            let result = calculator.minus(firstNumber: firstOperator, secondNumber: secondOperator)
+            
+            totalLabel.text = String(result)
+            
+            
+        }else {
+          
+            alert(title: "Error", message: "Inform at least one number")
+            
+        }
+    }
+    
+    func doDivision() {
+        if textFieldFirstNumberHasValue() {
+            
+            let firstOperator: Float = getTextFieldFirstNumberValue()
+            let secondOperator: Float? = getTextFieldSecondNumber()
+            
+            let result = calculator.division(firstNumber: firstOperator, secondNumber: secondOperator)
+            
+            totalLabel.text = String(result)
+            
+        }else {
+          
+            alert(title: "Error", message: "Inform at least one number")
+            
+        }
+    }
+    
+    func doMultiply() {
+        if textFieldFirstNumberHasValue() {
+            
+           let firstOperator: Float = getTextFieldFirstNumberValue()
+           let secondOperator: Float? = getTextFieldSecondNumber()
+           
+           let result = calculator.multiply(firstNumber: firstOperator, secondNumber: secondOperator)
+           
+           totalLabel.text = String(result)
+            
+        }else {
+          
+            alert(title: "Error", message: "Inform at least one number")
+            
+        }
+    }
 
 }
 
