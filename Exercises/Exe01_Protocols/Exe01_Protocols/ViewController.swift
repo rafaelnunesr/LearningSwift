@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         searchBar.delegate = self
+        inicializarDados()
     }
     
     private func filtrar(texto: String) {
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
         let arrayitensFiltrados = getItensFiltrados(filtro: texto)
         
         for item in arrayitensFiltrados {
-            output = "\(output)\n\(item.getFormatadoParaUsuario())"
+            output = "\(output)\n\n\(item.getFormatadoParaUsuario())"
         }
         
         atualizaLabel(informacao: output)

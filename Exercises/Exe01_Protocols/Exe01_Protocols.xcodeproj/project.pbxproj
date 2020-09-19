@@ -21,7 +21,7 @@
 		1B93A68F2514EC0A001CE4C0 /* Cachorro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93A68E2514EC0A001CE4C0 /* Cachorro.swift */; };
 		1B93A6912514EC45001CE4C0 /* Caneta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93A6902514EC45001CE4C0 /* Caneta.swift */; };
 		1B93A6942514ED16001CE4C0 /* FormatadorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B93A6932514ED16001CE4C0 /* FormatadorProtocol.swift */; };
-		1BAE5AF92514FC7D00FF065F /* dados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE5AF82514FC7D00FF065F /* dados.swift */; };
+		1BAE5AF92514FC7D00FF065F /* HardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE5AF82514FC7D00FF065F /* HardData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		1B93A68E2514EC0A001CE4C0 /* Cachorro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cachorro.swift; sourceTree = "<group>"; };
 		1B93A6902514EC45001CE4C0 /* Caneta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caneta.swift; sourceTree = "<group>"; };
 		1B93A6932514ED16001CE4C0 /* FormatadorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatadorProtocol.swift; sourceTree = "<group>"; };
-		1BAE5AF82514FC7D00FF065F /* dados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dados.swift; sourceTree = "<group>"; };
+		1BAE5AF82514FC7D00FF065F /* HardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B0B6F972515869900F9328B /* HardData */ = {
+			isa = PBXGroup;
+			children = (
+				1BAE5AF82514FC7D00FF065F /* HardData.swift */,
+			);
+			path = HardData;
+			sourceTree = "<group>";
+		};
 		1B93A6642514E7C7001CE4C0 = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +86,7 @@
 				1B93A6722514E7C8001CE4C0 /* SceneDelegate.swift */,
 				1B93A6742514E7C8001CE4C0 /* ViewController.swift */,
 				1B93A6762514E7C8001CE4C0 /* Main.storyboard */,
-				1BAE5AF82514FC7D00FF065F /* dados.swift */,
+				1B0B6F972515869900F9328B /* HardData */,
 				1B93A6962514F67B001CE4C0 /* Protocols */,
 				1B93A6922514EC8D001CE4C0 /* Categorias */,
 				1B93A6792514E7CB001CE4C0 /* Assets.xcassets */,
@@ -182,7 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B93A6752514E7C8001CE4C0 /* ViewController.swift in Sources */,
-				1BAE5AF92514FC7D00FF065F /* dados.swift in Sources */,
+				1BAE5AF92514FC7D00FF065F /* HardData.swift in Sources */,
 				1B93A6912514EC45001CE4C0 /* Caneta.swift in Sources */,
 				1B93A6872514E965001CE4C0 /* PessoaFisica.swift in Sources */,
 				1B93A6942514ED16001CE4C0 /* FormatadorProtocol.swift in Sources */,
