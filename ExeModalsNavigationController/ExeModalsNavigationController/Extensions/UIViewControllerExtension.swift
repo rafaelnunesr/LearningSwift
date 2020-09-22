@@ -29,7 +29,7 @@ extension UIViewController: UIViewControllerProtocol  {
     }
     
     func navigateTo(name: String) {
-        print("running")
+        
         if let view = UIStoryboard(name: name, bundle: nil).instantiateInitialViewController() {
             
             navigationController?.pushViewController(view, animated: true)
