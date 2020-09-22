@@ -16,7 +16,6 @@
 		1B5158F4251A270F009D6F16 /* UIViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5158F3251A270F009D6F16 /* UIViewControllerProtocol.swift */; };
 		1B5158F7251A2798009D6F16 /* UIButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5158F6251A2798009D6F16 /* UIButtonProtocol.swift */; };
 		1B5158FF251A2995009D6F16 /* SetupButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5158FE251A2995009D6F16 /* SetupButtons.swift */; };
-		1B515905251A2D19009D6F16 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B515904251A2D19009D6F16 /* ViewControllerExtension.swift */; };
 		1B515908251A2F76009D6F16 /* SetupButtonsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B515907251A2F76009D6F16 /* SetupButtonsProtocol.swift */; };
 		1B72EFA7251A3D5C00D42490 /* MyViewOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72EFA6251A3D5C00D42490 /* MyViewOneViewController.swift */; };
 		1B72EFAB251A3D7D00D42490 /* MyViewOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B72EFAA251A3D7D00D42490 /* MyViewOne.storyboard */; };
@@ -51,7 +50,6 @@
 		1B5158F3251A270F009D6F16 /* UIViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerProtocol.swift; sourceTree = "<group>"; };
 		1B5158F6251A2798009D6F16 /* UIButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonProtocol.swift; sourceTree = "<group>"; };
 		1B5158FE251A2995009D6F16 /* SetupButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButtons.swift; sourceTree = "<group>"; };
-		1B515904251A2D19009D6F16 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		1B515907251A2F76009D6F16 /* SetupButtonsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButtonsProtocol.swift; sourceTree = "<group>"; };
 		1B72EFA6251A3D5C00D42490 /* MyViewOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewOneViewController.swift; sourceTree = "<group>"; };
 		1B72EFAA251A3D7D00D42490 /* MyViewOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewOne.storyboard; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 			children = (
 				1B5158F3251A270F009D6F16 /* UIViewControllerProtocol.swift */,
 				1B5158F6251A2798009D6F16 /* UIButtonProtocol.swift */,
-				1B515904251A2D19009D6F16 /* ViewControllerExtension.swift */,
 				1B515907251A2F76009D6F16 /* SetupButtonsProtocol.swift */,
 			);
 			path = Protocols;
@@ -363,7 +360,6 @@
 				1BBBA43A2518E8E3005F7774 /* ViewController.swift in Sources */,
 				1B80970225197F6A007344DA /* UIButtonExtension.swift in Sources */,
 				1B72EFA7251A3D5C00D42490 /* MyViewOneViewController.swift in Sources */,
-				1B515905251A2D19009D6F16 /* ViewControllerExtension.swift in Sources */,
 				1B5158FF251A2995009D6F16 /* SetupButtons.swift in Sources */,
 				1B50F9BD251A3A9D00E88D5C /* MyViewThreePushedViewController.swift in Sources */,
 				1B8096F0251971D5007344DA /* UIViewControllerExtension.swift in Sources */,
