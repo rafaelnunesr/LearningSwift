@@ -9,9 +9,13 @@ import UIKit
 
 class MyViewTwoViewController: UIViewController {
 
+    
+    @IBOutlet var myViewButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        SetupButtons().setupButtons(collectionButtons: myViewButtons)
         title = "My View Two"
     }
     
@@ -24,7 +28,7 @@ class MyViewTwoViewController: UIViewController {
     
     @IBAction func actionTwoViewPushed(_ sender: Any) {
         
-        navegateTo(name: "MyViewTwoPushed")
+        navigateTo(name: "MyViewTwoPushed")
         
     }
 }

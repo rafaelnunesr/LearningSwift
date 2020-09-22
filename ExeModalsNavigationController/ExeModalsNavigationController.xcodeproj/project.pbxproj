@@ -7,37 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B50F9AC251A36AC00E88D5C /* MyViewThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50F9AB251A36AC00E88D5C /* MyViewThreeViewController.swift */; };
+		1B50F9B0251A36C500E88D5C /* MyViewThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B50F9AF251A36C500E88D5C /* MyViewThree.storyboard */; };
+		1B50F9B5251A39D400E88D5C /* MyViewThreeModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50F9B4251A39D400E88D5C /* MyViewThreeModalViewController.swift */; };
+		1B50F9B9251A39E100E88D5C /* MyViewThreeModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B50F9B8251A39E100E88D5C /* MyViewThreeModal.storyboard */; };
+		1B50F9BD251A3A9D00E88D5C /* MyViewThreePushedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50F9BC251A3A9D00E88D5C /* MyViewThreePushedViewController.swift */; };
+		1B50F9C0251A3AC700E88D5C /* MyViewThreePushed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B50F9BF251A3AC700E88D5C /* MyViewThreePushed.storyboard */; };
+		1B5158F4251A270F009D6F16 /* UIViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5158F3251A270F009D6F16 /* UIViewControllerProtocol.swift */; };
+		1B5158F7251A2798009D6F16 /* UIButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5158F6251A2798009D6F16 /* UIButtonProtocol.swift */; };
+		1B5158FF251A2995009D6F16 /* SetupButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5158FE251A2995009D6F16 /* SetupButtons.swift */; };
+		1B515905251A2D19009D6F16 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B515904251A2D19009D6F16 /* ViewControllerExtension.swift */; };
+		1B515908251A2F76009D6F16 /* SetupButtonsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B515907251A2F76009D6F16 /* SetupButtonsProtocol.swift */; };
+		1B72EFA7251A3D5C00D42490 /* MyViewOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72EFA6251A3D5C00D42490 /* MyViewOneViewController.swift */; };
+		1B72EFAB251A3D7D00D42490 /* MyViewOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B72EFAA251A3D7D00D42490 /* MyViewOne.storyboard */; };
+		1B72EFAE251A44C800D42490 /* MyViewOneModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72EFAD251A44C800D42490 /* MyViewOneModalViewController.swift */; };
+		1B72EFB1251A44D400D42490 /* MyViewOneModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B72EFB0251A44D400D42490 /* MyViewOneModal.storyboard */; };
+		1B72EFB4251A455600D42490 /* MyViewOnePushedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72EFB3251A455600D42490 /* MyViewOnePushedViewController.swift */; };
+		1B72EFB7251A456300D42490 /* MyViewOnePushed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B72EFB6251A456300D42490 /* MyViewOnePushed.storyboard */; };
+		1B798F90251A32FF00A35129 /* SetupLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B798F8F251A32FF00A35129 /* SetupLabels.swift */; };
 		1B8096E72519602D007344DA /* MyViewTwoModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8096E62519602D007344DA /* MyViewTwoModalViewController.swift */; };
 		1B8096EA2519604E007344DA /* MyViewTwoModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8096E92519604E007344DA /* MyViewTwoModal.storyboard */; };
 		1B8096F0251971D5007344DA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8096EF251971D5007344DA /* UIViewControllerExtension.swift */; };
 		1B8096FB25197E25007344DA /* MyViewTwoPushedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8096FA25197E25007344DA /* MyViewTwoPushedViewController.swift */; };
 		1B8096FF25197E3C007344DA /* MyViewTwoPushed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8096FE25197E3C007344DA /* MyViewTwoPushed.storyboard */; };
 		1B80970225197F6A007344DA /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B80970125197F6A007344DA /* UIButtonExtension.swift */; };
-		1B866C6F2519990D00EB78A1 /* ViewControllerCustomizationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B866C6E2519990D00EB78A1 /* ViewControllerCustomizationExtension.swift */; };
 		1BBBA4362518E8E3005F7774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBA4352518E8E3005F7774 /* AppDelegate.swift */; };
 		1BBBA4382518E8E3005F7774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBA4372518E8E3005F7774 /* SceneDelegate.swift */; };
 		1BBBA43A2518E8E3005F7774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBA4392518E8E3005F7774 /* ViewController.swift */; };
 		1BBBA43D2518E8E3005F7774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BBBA43B2518E8E3005F7774 /* Main.storyboard */; };
 		1BBBA43F2518E8E4005F7774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BBBA43E2518E8E4005F7774 /* Assets.xcassets */; };
 		1BBBA4422518E8E4005F7774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BBBA4402518E8E4005F7774 /* LaunchScreen.storyboard */; };
-		1BBBA44F2518E9BD005F7774 /* MyViewOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBA44E2518E9BD005F7774 /* MyViewOneViewController.swift */; };
-		1BBBA4532518E9E4005F7774 /* MyViewOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BBBA4522518E9E4005F7774 /* MyViewOne.storyboard */; };
-		1BBBA45A2518EC65005F7774 /* MyViewOneModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBA4592518EC65005F7774 /* MyViewOneModalViewController.swift */; };
-		1BBBA45E2518EC80005F7774 /* MyViewOneModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BBBA45D2518EC80005F7774 /* MyViewOneModal.storyboard */; };
-		1BC89645251957540076B6B8 /* MyViewOnePushedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC89644251957540076B6B8 /* MyViewOnePushedViewController.swift */; };
-		1BC896482519578B0076B6B8 /* MyViewOnePushed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC896472519578B0076B6B8 /* MyViewOnePushed.storyboard */; };
 		1BC8964C251958F40076B6B8 /* MyViewTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8964B251958F40076B6B8 /* MyViewTwoViewController.swift */; };
 		1BC89650251959010076B6B8 /* MyViewTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC8964F251959010076B6B8 /* MyViewTwo.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B50F9AB251A36AC00E88D5C /* MyViewThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewThreeViewController.swift; sourceTree = "<group>"; };
+		1B50F9AF251A36C500E88D5C /* MyViewThree.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewThree.storyboard; sourceTree = "<group>"; };
+		1B50F9B4251A39D400E88D5C /* MyViewThreeModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewThreeModalViewController.swift; sourceTree = "<group>"; };
+		1B50F9B8251A39E100E88D5C /* MyViewThreeModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewThreeModal.storyboard; sourceTree = "<group>"; };
+		1B50F9BC251A3A9D00E88D5C /* MyViewThreePushedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewThreePushedViewController.swift; sourceTree = "<group>"; };
+		1B50F9BF251A3AC700E88D5C /* MyViewThreePushed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewThreePushed.storyboard; sourceTree = "<group>"; };
+		1B5158F3251A270F009D6F16 /* UIViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerProtocol.swift; sourceTree = "<group>"; };
+		1B5158F6251A2798009D6F16 /* UIButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonProtocol.swift; sourceTree = "<group>"; };
+		1B5158FE251A2995009D6F16 /* SetupButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButtons.swift; sourceTree = "<group>"; };
+		1B515904251A2D19009D6F16 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		1B515907251A2F76009D6F16 /* SetupButtonsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupButtonsProtocol.swift; sourceTree = "<group>"; };
+		1B72EFA6251A3D5C00D42490 /* MyViewOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewOneViewController.swift; sourceTree = "<group>"; };
+		1B72EFAA251A3D7D00D42490 /* MyViewOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewOne.storyboard; sourceTree = "<group>"; };
+		1B72EFAD251A44C800D42490 /* MyViewOneModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewOneModalViewController.swift; sourceTree = "<group>"; };
+		1B72EFB0251A44D400D42490 /* MyViewOneModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewOneModal.storyboard; sourceTree = "<group>"; };
+		1B72EFB3251A455600D42490 /* MyViewOnePushedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewOnePushedViewController.swift; sourceTree = "<group>"; };
+		1B72EFB6251A456300D42490 /* MyViewOnePushed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewOnePushed.storyboard; sourceTree = "<group>"; };
+		1B798F8F251A32FF00A35129 /* SetupLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupLabels.swift; sourceTree = "<group>"; };
 		1B8096E62519602D007344DA /* MyViewTwoModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewTwoModalViewController.swift; sourceTree = "<group>"; };
 		1B8096E92519604E007344DA /* MyViewTwoModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewTwoModal.storyboard; sourceTree = "<group>"; };
 		1B8096EF251971D5007344DA /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1B8096FA25197E25007344DA /* MyViewTwoPushedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewTwoPushedViewController.swift; sourceTree = "<group>"; };
 		1B8096FE25197E3C007344DA /* MyViewTwoPushed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewTwoPushed.storyboard; sourceTree = "<group>"; };
 		1B80970125197F6A007344DA /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
-		1B866C6E2519990D00EB78A1 /* ViewControllerCustomizationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCustomizationExtension.swift; sourceTree = "<group>"; };
 		1BBBA4322518E8E3005F7774 /* ExeModalsNavigationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExeModalsNavigationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBBA4352518E8E3005F7774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BBBA4372518E8E3005F7774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,12 +74,6 @@
 		1BBBA43E2518E8E4005F7774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BBBA4412518E8E4005F7774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BBBA4432518E8E4005F7774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BBBA44E2518E9BD005F7774 /* MyViewOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewOneViewController.swift; sourceTree = "<group>"; };
-		1BBBA4522518E9E4005F7774 /* MyViewOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewOne.storyboard; sourceTree = "<group>"; };
-		1BBBA4592518EC65005F7774 /* MyViewOneModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewOneModalViewController.swift; sourceTree = "<group>"; };
-		1BBBA45D2518EC80005F7774 /* MyViewOneModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewOneModal.storyboard; sourceTree = "<group>"; };
-		1BC89644251957540076B6B8 /* MyViewOnePushedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewOnePushedViewController.swift; sourceTree = "<group>"; };
-		1BC896472519578B0076B6B8 /* MyViewOnePushed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewOnePushed.storyboard; sourceTree = "<group>"; };
 		1BC8964B251958F40076B6B8 /* MyViewTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewTwoViewController.swift; sourceTree = "<group>"; };
 		1BC8964F251959010076B6B8 /* MyViewTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewTwo.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +89,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B50F9AA251A369300E88D5C /* MyViewThree */ = {
+			isa = PBXGroup;
+			children = (
+				1B50F9AB251A36AC00E88D5C /* MyViewThreeViewController.swift */,
+				1B50F9AF251A36C500E88D5C /* MyViewThree.storyboard */,
+			);
+			path = MyViewThree;
+			sourceTree = "<group>";
+		};
+		1B50F9B3251A399D00E88D5C /* MyViewThreeModal */ = {
+			isa = PBXGroup;
+			children = (
+				1B50F9B4251A39D400E88D5C /* MyViewThreeModalViewController.swift */,
+				1B50F9B8251A39E100E88D5C /* MyViewThreeModal.storyboard */,
+			);
+			path = MyViewThreeModal;
+			sourceTree = "<group>";
+		};
+		1B50F9BB251A3A8000E88D5C /* MyViewThreePushed */ = {
+			isa = PBXGroup;
+			children = (
+				1B50F9BC251A3A9D00E88D5C /* MyViewThreePushedViewController.swift */,
+				1B50F9BF251A3AC700E88D5C /* MyViewThreePushed.storyboard */,
+			);
+			path = MyViewThreePushed;
+			sourceTree = "<group>";
+		};
+		1B5158F2251A26FA009D6F16 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1B5158F3251A270F009D6F16 /* UIViewControllerProtocol.swift */,
+				1B5158F6251A2798009D6F16 /* UIButtonProtocol.swift */,
+				1B515904251A2D19009D6F16 /* ViewControllerExtension.swift */,
+				1B515907251A2F76009D6F16 /* SetupButtonsProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1B5158FD251A2971009D6F16 /* MainClass */ = {
+			isa = PBXGroup;
+			children = (
+				1B5158FE251A2995009D6F16 /* SetupButtons.swift */,
+				1B798F8F251A32FF00A35129 /* SetupLabels.swift */,
+			);
+			path = MainClass;
+			sourceTree = "<group>";
+		};
+		1B72EFA3251A3CFA00D42490 /* MyViewOne */ = {
+			isa = PBXGroup;
+			children = (
+				1B72EFA6251A3D5C00D42490 /* MyViewOneViewController.swift */,
+				1B72EFAA251A3D7D00D42490 /* MyViewOne.storyboard */,
+			);
+			path = MyViewOne;
+			sourceTree = "<group>";
+		};
+		1B72EFA4251A3D0300D42490 /* MyViewOneModal */ = {
+			isa = PBXGroup;
+			children = (
+				1B72EFAD251A44C800D42490 /* MyViewOneModalViewController.swift */,
+				1B72EFB0251A44D400D42490 /* MyViewOneModal.storyboard */,
+			);
+			path = MyViewOneModal;
+			sourceTree = "<group>";
+		};
+		1B72EFA5251A3D1200D42490 /* MyViewOnePushed */ = {
+			isa = PBXGroup;
+			children = (
+				1B72EFB3251A455600D42490 /* MyViewOnePushedViewController.swift */,
+				1B72EFB6251A456300D42490 /* MyViewOnePushed.storyboard */,
+			);
+			path = MyViewOnePushed;
+			sourceTree = "<group>";
+		};
 		1B8096E525196012007344DA /* MyViewTwoModal */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +177,6 @@
 			children = (
 				1B8096EF251971D5007344DA /* UIViewControllerExtension.swift */,
 				1B80970125197F6A007344DA /* UIButtonExtension.swift */,
-				1B866C6E2519990D00EB78A1 /* ViewControllerCustomizationExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -99,9 +194,9 @@
 		1B8096F325197B0A007344DA /* ViewOne */ = {
 			isa = PBXGroup;
 			children = (
-				1BBBA44D2518E978005F7774 /* MyViewOne */,
-				1BBBA4582518EC42005F7774 /* MyViewOneModal */,
-				1BC89643251957360076B6B8 /* MyViewOnePushed */,
+				1B72EFA3251A3CFA00D42490 /* MyViewOne */,
+				1B72EFA4251A3D0300D42490 /* MyViewOneModal */,
+				1B72EFA5251A3D1200D42490 /* MyViewOnePushed */,
 			);
 			path = ViewOne;
 			sourceTree = "<group>";
@@ -109,6 +204,9 @@
 		1B8096F525197B2F007344DA /* ViewThree */ = {
 			isa = PBXGroup;
 			children = (
+				1B50F9AA251A369300E88D5C /* MyViewThree */,
+				1B50F9B3251A399D00E88D5C /* MyViewThreeModal */,
+				1B50F9BB251A3A8000E88D5C /* MyViewThreePushed */,
 			);
 			path = ViewThree;
 			sourceTree = "<group>";
@@ -141,6 +239,8 @@
 		1BBBA4342518E8E3005F7774 /* ExeModalsNavigationController */ = {
 			isa = PBXGroup;
 			children = (
+				1B5158FD251A2971009D6F16 /* MainClass */,
+				1B5158F2251A26FA009D6F16 /* Protocols */,
 				1B8096ED25196B43007344DA /* Extensions */,
 				1BBBA44C2518E949005F7774 /* Views */,
 				1BBBA4352518E8E3005F7774 /* AppDelegate.swift */,
@@ -170,33 +270,6 @@
 				1B8096F525197B2F007344DA /* ViewThree */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		1BBBA44D2518E978005F7774 /* MyViewOne */ = {
-			isa = PBXGroup;
-			children = (
-				1BBBA44E2518E9BD005F7774 /* MyViewOneViewController.swift */,
-				1BBBA4522518E9E4005F7774 /* MyViewOne.storyboard */,
-			);
-			path = MyViewOne;
-			sourceTree = "<group>";
-		};
-		1BBBA4582518EC42005F7774 /* MyViewOneModal */ = {
-			isa = PBXGroup;
-			children = (
-				1BBBA4592518EC65005F7774 /* MyViewOneModalViewController.swift */,
-				1BBBA45D2518EC80005F7774 /* MyViewOneModal.storyboard */,
-			);
-			path = MyViewOneModal;
-			sourceTree = "<group>";
-		};
-		1BC89643251957360076B6B8 /* MyViewOnePushed */ = {
-			isa = PBXGroup;
-			children = (
-				1BC89644251957540076B6B8 /* MyViewOnePushedViewController.swift */,
-				1BC896472519578B0076B6B8 /* MyViewOnePushed.storyboard */,
-			);
-			path = MyViewOnePushed;
 			sourceTree = "<group>";
 		};
 		1BC8964A251958DF0076B6B8 /* MyViewTwo */ = {
@@ -266,14 +339,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B8096EA2519604E007344DA /* MyViewTwoModal.storyboard in Resources */,
-				1BBBA45E2518EC80005F7774 /* MyViewOneModal.storyboard in Resources */,
 				1BC89650251959010076B6B8 /* MyViewTwo.storyboard in Resources */,
 				1BBBA4422518E8E4005F7774 /* LaunchScreen.storyboard in Resources */,
 				1B8096FF25197E3C007344DA /* MyViewTwoPushed.storyboard in Resources */,
+				1B50F9C0251A3AC700E88D5C /* MyViewThreePushed.storyboard in Resources */,
+				1B72EFB7251A456300D42490 /* MyViewOnePushed.storyboard in Resources */,
+				1B72EFB1251A44D400D42490 /* MyViewOneModal.storyboard in Resources */,
 				1BBBA43F2518E8E4005F7774 /* Assets.xcassets in Resources */,
-				1BBBA4532518E9E4005F7774 /* MyViewOne.storyboard in Resources */,
+				1B72EFAB251A3D7D00D42490 /* MyViewOne.storyboard in Resources */,
+				1B50F9B0251A36C500E88D5C /* MyViewThree.storyboard in Resources */,
+				1B50F9B9251A39E100E88D5C /* MyViewThreeModal.storyboard in Resources */,
 				1BBBA43D2518E8E3005F7774 /* Main.storyboard in Resources */,
-				1BC896482519578B0076B6B8 /* MyViewOnePushed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,16 +362,24 @@
 			files = (
 				1BBBA43A2518E8E3005F7774 /* ViewController.swift in Sources */,
 				1B80970225197F6A007344DA /* UIButtonExtension.swift in Sources */,
-				1B866C6F2519990D00EB78A1 /* ViewControllerCustomizationExtension.swift in Sources */,
-				1BC89645251957540076B6B8 /* MyViewOnePushedViewController.swift in Sources */,
+				1B72EFA7251A3D5C00D42490 /* MyViewOneViewController.swift in Sources */,
+				1B515905251A2D19009D6F16 /* ViewControllerExtension.swift in Sources */,
+				1B5158FF251A2995009D6F16 /* SetupButtons.swift in Sources */,
+				1B50F9BD251A3A9D00E88D5C /* MyViewThreePushedViewController.swift in Sources */,
 				1B8096F0251971D5007344DA /* UIViewControllerExtension.swift in Sources */,
+				1B50F9AC251A36AC00E88D5C /* MyViewThreeViewController.swift in Sources */,
+				1B5158F7251A2798009D6F16 /* UIButtonProtocol.swift in Sources */,
 				1BBBA4362518E8E3005F7774 /* AppDelegate.swift in Sources */,
-				1BBBA45A2518EC65005F7774 /* MyViewOneModalViewController.swift in Sources */,
+				1B5158F4251A270F009D6F16 /* UIViewControllerProtocol.swift in Sources */,
 				1B8096E72519602D007344DA /* MyViewTwoModalViewController.swift in Sources */,
+				1B515908251A2F76009D6F16 /* SetupButtonsProtocol.swift in Sources */,
+				1B72EFAE251A44C800D42490 /* MyViewOneModalViewController.swift in Sources */,
 				1BC8964C251958F40076B6B8 /* MyViewTwoViewController.swift in Sources */,
 				1B8096FB25197E25007344DA /* MyViewTwoPushedViewController.swift in Sources */,
-				1BBBA44F2518E9BD005F7774 /* MyViewOneViewController.swift in Sources */,
+				1B50F9B5251A39D400E88D5C /* MyViewThreeModalViewController.swift in Sources */,
+				1B72EFB4251A455600D42490 /* MyViewOnePushedViewController.swift in Sources */,
 				1BBBA4382518E8E3005F7774 /* SceneDelegate.swift in Sources */,
+				1B798F90251A32FF00A35129 /* SetupLabels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TJW-uu-qBQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6bI-sC-kji">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -9,41 +9,41 @@
     </dependencies>
     <scenes>
         <!--My View One View Controller-->
-        <scene sceneID="kJN-hk-7eR">
+        <scene sceneID="AOo-ls-46K">
             <objects>
-                <viewController id="TJW-uu-qBQ" customClass="MyViewOneViewController" customModule="ExeModalsNavigationController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mLX-1t-4XO">
+                <viewController id="6bI-sC-kji" customClass="MyViewOneViewController" customModule="ExeModalsNavigationController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1cB-RT-Oub">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfA-BE-pOM">
-                                <rect key="frame" x="123" y="168" width="168" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLR-Oc-ipB">
+                                <rect key="frame" x="20" y="125" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="MyViewOneModal"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIf-pJ-ScX">
-                                <rect key="frame" x="123" y="236" width="180" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="MyViewOnePushed"/>
+                                <state key="normal" title="My View One Modal"/>
                                 <connections>
-                                    <action selector="actionViewOnePushed:" destination="TJW-uu-qBQ" eventType="touchUpInside" id="aGW-4k-z4G"/>
+                                    <action selector="actionViewOneModal:" destination="6bI-sC-kji" eventType="touchUpInside" id="V6G-I9-MXQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHv-sv-laD">
+                                <rect key="frame" x="20" y="163" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="My View One Pushed"/>
+                                <connections>
+                                    <action selector="actionViewOnePushed:" destination="6bI-sC-kji" eventType="touchUpInside" id="iuB-nJ-O2t"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="ayA-zJ-F0p"/>
+                        <viewLayoutGuide key="safeArea" id="dKF-qg-riv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="myViewButtons" destination="kfA-BE-pOM" id="KRN-kI-vre"/>
-                        <outletCollection property="myViewButtons" destination="kfA-BE-pOM" collectionClass="NSMutableArray" id="LLM-gi-XqU"/>
-                        <outletCollection property="myViewButtons" destination="zIf-pJ-ScX" collectionClass="NSMutableArray" id="yR2-9W-Mjw"/>
+                        <outletCollection property="myViewButtons" destination="kLR-Oc-ipB" collectionClass="NSMutableArray" id="NPq-uT-ipM"/>
+                        <outletCollection property="myViewButtons" destination="wHv-sv-laD" collectionClass="NSMutableArray" id="Frs-mg-ZK9"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vBK-Mq-e1c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Py-JG-SRu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="77"/>
+            <point key="canvasLocation" x="-568.1159420289855" y="98.4375"/>
         </scene>
     </scenes>
     <resources>

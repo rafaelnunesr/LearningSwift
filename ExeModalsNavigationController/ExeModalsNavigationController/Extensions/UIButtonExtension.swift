@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIButton {
+extension UIButton: UIButtonProtocol {
     
     func setBackgroundColorButton(color: UIColor) {
         self.backgroundColor = color

@@ -17,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mr-yX-WxB">
-                                <rect key="frame" x="145" y="114" width="124" height="30"/>
+                                <rect key="frame" x="20" y="114" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="MyViewTwoModel"/>
+                                <state key="normal" title="My View Two Modal"/>
                                 <connections>
                                     <action selector="actionTwoViewModal:" destination="Qgy-co-bAq" eventType="touchUpInside" id="4cH-JY-NHK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppa-BB-kHI">
-                                <rect key="frame" x="141" y="183" width="133" height="30"/>
+                                <rect key="frame" x="20" y="152" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="MyViewTwoPushed"/>
+                                <state key="normal" title="My View Two Pushed"/>
                                 <connections>
                                     <action selector="actionTwoViewPushed:" destination="Qgy-co-bAq" eventType="touchUpInside" id="Fub-IC-pwc"/>
                                 </connections>
@@ -36,10 +36,14 @@
                         <viewLayoutGuide key="safeArea" id="iAa-i9-h9C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outletCollection property="myViewButtons" destination="2Mr-yX-WxB" collectionClass="NSMutableArray" id="lNy-Mp-Xqr"/>
+                        <outletCollection property="myViewButtons" destination="ppa-BB-kHI" collectionClass="NSMutableArray" id="qfr-A3-Jv9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXf-43-FiK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="72"/>
+            <point key="canvasLocation" x="-23.188405797101453" y="71.651785714285708"/>
         </scene>
     </scenes>
     <resources>

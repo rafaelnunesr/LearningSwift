@@ -1,13 +1,13 @@
 //
-//  MyViewTwoPushedViewController.swift
+//  MyViewThreePushedViewController.swift
 //  ExeModalsNavigationController
 //
-//  Created by Rafael Rios on 9/21/20.
+//  Created by Rafael Rios on 9/22/20.
 //
 
 import UIKit
 
-class MyViewTwoPushedViewController: UIViewController {
+class MyViewThreePushedViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
     
@@ -17,6 +17,5 @@ class MyViewTwoPushedViewController: UIViewController {
         SetupLabels().setupLabels(label: textLabel)
     }
     
-
 
 }

@@ -1,14 +1,21 @@
 //
-//  UIViewControllerExtension.swift
+//  ViewControllerExtension.swift
 //  ExeModalsNavigationController
 //
-//  Created by Rafael Rios on 9/21/20.
+//  Created by Rafael Rios on 9/22/20.
 //
 
 import Foundation
 import UIKit
 
-extension UIViewController: UIViewControllerProtocol  {
+extension ViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupButtons(collectionButtons: myViewsButtons)
+        title = "Home Screen"
+    }
     
     func presentModal(name: String) {
         
@@ -28,13 +35,13 @@ extension UIViewController: UIViewControllerProtocol  {
         
     }
     
-    func navigateTo(name: String) {
-        print("running")
+    func navegateTo(name: String) {
+        
         if let view = UIStoryboard(name: name, bundle: nil).instantiateInitialViewController() {
             
             navigationController?.pushViewController(view, animated: true)
         }
         
     }
- 
+    
 }
