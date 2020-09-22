@@ -68,7 +68,7 @@ class ViewController: UIViewController {
     private func getTextFieldSecondNumber() -> Float? {
         
         if let second = textFieldSecondNumber.text {
-            return Float(second)!
+            return Float(second)
         }
         
         return nil
@@ -85,6 +85,11 @@ class ViewController: UIViewController {
         self.present(alert, animated: true) {
            
         }
+    }
+    
+    private func clearFields() {
+        textFieldFirstNumber.text = ""
+        textFieldSecondNumber.text = ""
     }
     
     
@@ -111,6 +116,8 @@ class ViewController: UIViewController {
             alert(title: "Error", message: "Inform at least one number")
             
         }
+        
+        clearFields()
     }
     
     func doMinus() {
@@ -129,6 +136,8 @@ class ViewController: UIViewController {
             alert(title: "Error", message: "Inform at least one number")
             
         }
+        
+        clearFields()
     }
     
     func doDivision() {
@@ -146,6 +155,8 @@ class ViewController: UIViewController {
             alert(title: "Error", message: "Inform at least one number")
             
         }
+        
+        clearFields()
     }
     
     func doMultiply() {
@@ -163,6 +174,8 @@ class ViewController: UIViewController {
             alert(title: "Error", message: "Inform at least one number")
             
         }
+        
+        clearFields()
     }
 
 }
