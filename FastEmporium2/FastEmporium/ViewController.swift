@@ -26,9 +26,6 @@ class ViewController: UIViewController {
     
     var products = Products()
     
-    var pp = ["Arroz", "Macarrao"]
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +41,20 @@ class ViewController: UIViewController {
     
     // MARK: Button Save
     @IBAction func buttonSave(_ sender: Any) {
+       saveUpdateItem()
+    }
+
+    
+    @IBAction func buttonClear(_ sender: Any) {
+        clearFields()
+        setTitleSaveButtonToSave()
+    }
+    
+    @IBAction func buttonDelete(_ sender: Any) {
+        deleteItem()
+    }
+    
+    private func saveUpdateItem() {
         
         let productName = getTextFieldProductName()
         if products.ifProductExists(productName: productName) && ifTextFieldQuantityHasData(){
@@ -71,15 +82,10 @@ class ViewController: UIViewController {
         enableDisableASaveClearButton()
         clearFields()
         setTitleSaveButtonToSave()
-    }
-    
-    @IBAction func buttonClear(_ sender: Any) {
-        clearFields()
-        setTitleSaveButtonToSave()
-    }
-    
-    @IBAction func buttonDelete(_ sender: Any) {
         
+    }
+    
+    private func deleteItem() {
         let productName = getTextFieldProductName()
         
         if products.removeProduct(productName: productName) {
@@ -92,7 +98,6 @@ class ViewController: UIViewController {
         hideButtonDelete()
         clearFields()
         setTitleSaveButtonToSave()
-        
     }
     
     private func clearFields() {

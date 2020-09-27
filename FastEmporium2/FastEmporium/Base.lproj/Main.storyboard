@@ -41,7 +41,7 @@
                                     <action selector="buttonSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ycl-cT-X06"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98g-B9-ZPN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98g-B9-ZPN">
                                 <rect key="frame" x="20" y="294" width="374" height="36"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
@@ -76,8 +76,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.97227032230640986" green="0.97920274172980748" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="98g-B9-ZPN" secondAttribute="trailing" constant="20" id="Pau-la-5Xw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cgL-Cc-2WM" secondAttribute="trailing" constant="20" id="TcX-uq-hWB"/>
                             <constraint firstItem="cgL-Cc-2WM" firstAttribute="top" secondItem="98g-B9-ZPN" secondAttribute="bottom" constant="54" id="V7i-Zj-n7V"/>
+                            <constraint firstItem="98g-B9-ZPN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Y4A-qj-AVt"/>
                             <constraint firstItem="cgL-Cc-2WM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YXZ-BG-05c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cgL-Cc-2WM" secondAttribute="bottom" constant="183" id="cNP-69-3qD"/>
                         </constraints>

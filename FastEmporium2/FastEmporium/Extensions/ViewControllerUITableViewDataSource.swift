@@ -19,8 +19,6 @@ extension ViewController: UITableViewDataSource {
         
         let cell = UITableViewCell()
         
-        tableView(tableView, numberOfRowsInSection: products.arrayProducts.count)
-        
         let product = products.arrayProducts[indexPath.row].name
         let quantity = products.arrayProducts[indexPath.row].quantity
         
