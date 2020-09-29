@@ -15,11 +15,30 @@ class DeveloperCell: UITableViewCell {
     
     func setup(developer: Developer) {
         
-        imageViewDeveloperPhoto.image = UIImage(named: developer.photo)
-        textLabelDeveloperName.transformTextToBold(text: developer.name)
-        textLabelDeveloperName.text = developer.name
-        textLabelDeveloperEmail.text = developer.email
+        handleImageViewDeveloperPhoto(photoName: developer.photo)
+        handleTextLabelDeveloperName(developerName: developer.name)
+        handleTextLabelDeveloperEmail(developerEmail: developer.email)
         
+    }
+    
+    private func handleImageViewDeveloperPhoto(photoName: String) {
+        
+        imageViewDeveloperPhoto.image = UIImage(named: photoName)
+        imageViewDeveloperPhoto.layer.cornerRadius = 35
+    }
+    
+    private func handleTextLabelDeveloperName(developerName: String) {
+        
+        textLabelDeveloperName.transformTextToBold(text: developerName)
+        textLabelDeveloperName.text = developerName
+    }
+
+    
+    private func handleTextLabelDeveloperEmail(developerEmail: String) {
+        
+        textLabelDeveloperEmail.transformTextItalic(text: developerEmail)
+        textLabelDeveloperEmail.colorText(color: UIColor.gray)
+        textLabelDeveloperEmail.text = developerEmail
     }
 
     override func awakeFromNib() {
@@ -34,10 +53,4 @@ class DeveloperCell: UITableViewCell {
 
 }
 
-extension UILabel {
-    
-    func transformTextToBold(text: String) {
-        self.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-    }
-    
-}
+
