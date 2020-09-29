@@ -24,7 +24,7 @@
 		1B4405852522AAB400322933 /* developer.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = developer.jpeg; sourceTree = "<group>"; };
 		1B4405882522B4A500322933 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		1B4405902522B60500322933 /* Developers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developers.swift; sourceTree = "<group>"; };
-		1B608202252245EF0031BC9B /* CustumizedCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustumizedCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B608202252245EF0031BC9B /* CustomizedCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomizedCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B608205252245EF0031BC9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B608207252245EF0031BC9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1B608209252245EF0031BC9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		1B6081F9252245EF0031BC9B = {
 			isa = PBXGroup;
 			children = (
-				1B608204252245EF0031BC9B /* CustumizedCell */,
+				1B608204252245EF0031BC9B /* CustomizedCell */,
 				1B608203252245EF0031BC9B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,12 +75,12 @@
 		1B608203252245EF0031BC9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1B608202252245EF0031BC9B /* CustumizedCell.app */,
+				1B608202252245EF0031BC9B /* CustomizedCell.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1B608204252245EF0031BC9B /* CustumizedCell */ = {
+		1B608204252245EF0031BC9B /* CustomizedCell */ = {
 			isa = PBXGroup;
 			children = (
 				1B608205252245EF0031BC9B /* AppDelegate.swift */,
@@ -95,7 +95,7 @@
 				1B608210252245F10031BC9B /* LaunchScreen.storyboard */,
 				1B608213252245F10031BC9B /* Info.plist */,
 			);
-			path = CustumizedCell;
+			path = CustomizedCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,7 +115,7 @@
 			);
 			name = CustumizedCell;
 			productName = CustumizedCell;
-			productReference = 1B608202252245EF0031BC9B /* CustumizedCell.app */;
+			productReference = 1B608202252245EF0031BC9B /* CustomizedCell.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,7 +132,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1B6081FD252245EF0031BC9B /* Build configuration list for PBXProject "CustumizedCell" */;
+			buildConfigurationList = 1B6081FD252245EF0031BC9B /* Build configuration list for PBXProject "CustomizedCell" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -323,13 +323,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CustumizedCell/Info.plist;
+				INFOPLIST_FILE = CustomizedCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rafa.CustumizedCell;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rafa.CustomizedCell;
+				PRODUCT_NAME = CustomizedCell;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -341,13 +341,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CustumizedCell/Info.plist;
+				INFOPLIST_FILE = CustomizedCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rafa.CustumizedCell;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rafa.CustomizedCell;
+				PRODUCT_NAME = CustomizedCell;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -356,7 +356,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B6081FD252245EF0031BC9B /* Build configuration list for PBXProject "CustumizedCell" */ = {
+		1B6081FD252245EF0031BC9B /* Build configuration list for PBXProject "CustomizedCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B608214252245F10031BC9B /* Debug */,
