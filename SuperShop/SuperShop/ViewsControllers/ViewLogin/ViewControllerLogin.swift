@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewControllerLogin: UIViewController {
     
     // MARK: WELCOME INFO
-    @IBOutlet weak var textLabelWelcomeInfo: UILabel!
+    @IBOutlet weak var textFieldWelcomeMessage: ViewControllerLogin!
     
     // MARK: TEXTFIELDS
     @IBOutlet weak var textFieldEmail: UITextField!
@@ -20,17 +20,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonSignIn: UIButton!
     @IBOutlet weak var buttonSignUp: UIButton!
     
-    var products = Products()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupButtons()
-        hardInitProducts()
     }
 
     // MARK: ACTION BUTTONS
     @IBAction func actionSignIn(_ sender: Any) {
+        
+        if let viewProducts = UIStoryboard(name: "ViewProducts", bundle: nil).instantiateInitialViewController() as? ViewControllerProducts {
+            navigationController?.pushViewController(viewProducts, animated: true)
+        }
     }
     
     @IBAction func actionSignUp(_ sender: Any) {
@@ -49,14 +50,6 @@ class ViewController: UIViewController {
         
         buttonSignIn.setFontWeightButton()
         buttonSignUp.setFontWeightButton()
-        
-    }
-    
-    func hardInitProducts() {
-        products.arrayProducts.append(Product(productName: "Knife X Model", expirationDate: nil, price: 22.35))
-        products.arrayProducts.append(Product(productName: "Cereal Fruits", expirationDate: "06/2021", price: 6.88))
-        products.arrayProducts.append(Product(productName: "Chips Potato", expirationDate: "12/2020", price: 4.79))
-        products.arrayProducts.append(Product(productName: "Soda Lemon", expirationDate: "07/2021", price: 1.99))
         
     }
     

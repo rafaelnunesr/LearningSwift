@@ -10,11 +10,13 @@ import UIKit
 
 class Product {
     var productName: String
+    var productPhoto: String
     var expirationDate: String?
     var price: Double
     
-    init(productName: String, expirationDate: String?, price: Double) {
+    init(productName: String, productPhoto: String, expirationDate: String?, price: Double) {
         self.productName = productName
+        self.productPhoto = productPhoto
         self.expirationDate = expirationDate
         self.price = price
     }
