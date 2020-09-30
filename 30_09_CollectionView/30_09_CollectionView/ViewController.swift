@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         viewCollection.delegate = self
         viewCollection.dataSource = self
         
-        arrayCars.append(Car(photo: "car.png"))
+        arrayCars.append(Car(photo: "car01.png"))
         arrayCars.append(Car(photo: "car02.png"))
         arrayCars.append(Car(photo: "car03.png"))
         arrayCars.append(Car(photo: "car04.png"))
