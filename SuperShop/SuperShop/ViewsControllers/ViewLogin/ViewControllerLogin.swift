@@ -29,7 +29,7 @@ class ViewControllerLogin: UIViewController {
     // MARK: ACTION BUTTONS
     @IBAction func actionSignIn(_ sender: Any) {
         
-        if let viewProducts = UIStoryboard(name: "ViewProducts", bundle: nil).instantiateInitialViewController() as? ViewControllerProducts {
+        if let viewProducts = UIStoryboard(name: "Products", bundle: nil).instantiateInitialViewController() as? ViewControllerProducts {
             navigationController?.pushViewController(viewProducts, animated: true)
         }
     }

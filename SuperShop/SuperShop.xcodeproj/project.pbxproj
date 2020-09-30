@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B0301A9252392080032A06D /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0301A8252392080032A06D /* UIButtonExtension.swift */; };
+		1B4774A925249D500065296F /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4774A825249D500065296F /* default.png */; };
 		1B5E835B2523F7A300DCE66B /* ViewControllerSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E835A2523F7A300DCE66B /* ViewControllerSignUp.swift */; };
 		1B5E835E2523F7B800DCE66B /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E835D2523F7B800DCE66B /* SignUp.storyboard */; };
 		1B5E83622523FBB400DCE66B /* TermsViewControllerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E83612523FBB400DCE66B /* TermsViewControllerModal.swift */; };
@@ -15,7 +16,7 @@
 		1B5EC1EC252382BC0083C12A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EC1EB252382BC0083C12A /* AppDelegate.swift */; };
 		1B5EC1EE252382BC0083C12A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EC1ED252382BC0083C12A /* SceneDelegate.swift */; };
 		1B5EC1F0252382BC0083C12A /* ViewControllerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EC1EF252382BC0083C12A /* ViewControllerLogin.swift */; };
-		1B5EC1F3252382BC0083C12A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5EC1F1252382BC0083C12A /* Login.storyboard */; };
+		1B5EC1F3252382BC0083C12A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5EC1F1252382BC0083C12A /* Main.storyboard */; };
 		1B5EC1F5252382BE0083C12A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B5EC1F4252382BE0083C12A /* Assets.xcassets */; };
 		1B5EC1F8252382BE0083C12A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5EC1F6252382BE0083C12A /* LaunchScreen.storyboard */; };
 		1B5EC20125238A590083C12A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EC20025238A590083C12A /* User.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		1B0301A8252392080032A06D /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		1B4774A825249D500065296F /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		1B5E835A2523F7A300DCE66B /* ViewControllerSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSignUp.swift; sourceTree = "<group>"; };
 		1B5E835D2523F7B800DCE66B /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		1B5E83612523FBB400DCE66B /* TermsViewControllerModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewControllerModal.swift; sourceTree = "<group>"; };
@@ -39,7 +41,7 @@
 		1B5EC1EB252382BC0083C12A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B5EC1ED252382BC0083C12A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1B5EC1EF252382BC0083C12A /* ViewControllerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLogin.swift; sourceTree = "<group>"; };
-		1B5EC1F2252382BC0083C12A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		1B5EC1F2252382BC0083C12A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B5EC1F4252382BE0083C12A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B5EC1F7252382BE0083C12A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B5EC1F9252382BE0083C12A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				1B5EC1EF252382BC0083C12A /* ViewControllerLogin.swift */,
-				1B5EC1F1252382BC0083C12A /* Login.storyboard */,
+				1B5EC1F1252382BC0083C12A /* Main.storyboard */,
 			);
 			path = ViewLogin;
 			sourceTree = "<group>";
@@ -158,6 +160,7 @@
 		1BEB6F532524020100F0514E /* ViewProducts */ = {
 			isa = PBXGroup;
 			children = (
+				1B4774A825249D500065296F /* default.png */,
 				1BEB6F542524023100F0514E /* ViewControllerProducts.swift */,
 				1BEB6F582524024900F0514E /* Products.storyboard */,
 			);
@@ -241,10 +244,11 @@
 				1BEB6F592524024900F0514E /* Products.storyboard in Resources */,
 				1B5EC1F8252382BE0083C12A /* LaunchScreen.storyboard in Resources */,
 				1B5E83672523FC4500DCE66B /* Terms.storyboard in Resources */,
+				1B4774A925249D500065296F /* default.png in Resources */,
 				1B5E835E2523F7B800DCE66B /* SignUp.storyboard in Resources */,
 				1B5EC1F5252382BE0083C12A /* Assets.xcassets in Resources */,
 				1BEB6F672524102900F0514E /* ProductDetail.storyboard in Resources */,
-				1B5EC1F3252382BC0083C12A /* Login.storyboard in Resources */,
+				1B5EC1F3252382BC0083C12A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,12 +278,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1B5EC1F1252382BC0083C12A /* Login.storyboard */ = {
+		1B5EC1F1252382BC0083C12A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1B5EC1F2252382BC0083C12A /* Base */,
 			);
-			name = Login.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		1B5EC1F6252382BE0083C12A /* LaunchScreen.storyboard */ = {

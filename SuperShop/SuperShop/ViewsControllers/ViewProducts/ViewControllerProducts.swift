@@ -50,7 +50,11 @@ class ViewControllerProducts: UIViewController {
 
 extension ViewControllerProducts: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if let productDetail = UIStoryboard(name: "ProductDetail", bundle: nil).instantiateInitialViewController() as? ViewControllerProductDetailModal {
+            
+            present(productDetail, animated: true, completion: nil)
+        }
     }
 }
 
