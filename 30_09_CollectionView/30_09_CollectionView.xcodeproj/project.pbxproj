@@ -14,6 +14,11 @@
 		1B4774C22524BBC60065296F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B4774C12524BBC60065296F /* Assets.xcassets */; };
 		1B4774C52524BBC60065296F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4774C32524BBC60065296F /* LaunchScreen.storyboard */; };
 		1B4774CE2524BC550065296F /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4774CD2524BC550065296F /* car.png */; };
+		1B4774D12524C25F0065296F /* CarsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4774D02524C25F0065296F /* CarsCollectionViewCell.swift */; };
+		1B4774D42524C37D0065296F /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4774D32524C37D0065296F /* Car.swift */; };
+		1B4774D92524C6A80065296F /* car04.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4774D62524C6A70065296F /* car04.png */; };
+		1B4774DA2524C6A80065296F /* car03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4774D72524C6A70065296F /* car03.png */; };
+		1B4774DB2524C6A80065296F /* car02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B4774D82524C6A80065296F /* car02.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		1B4774C42524BBC60065296F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B4774C62524BBC60065296F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B4774CD2524BC550065296F /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
+		1B4774D02524C25F0065296F /* CarsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsCollectionViewCell.swift; sourceTree = "<group>"; };
+		1B4774D32524C37D0065296F /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		1B4774D62524C6A70065296F /* car04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car04.png; sourceTree = "<group>"; };
+		1B4774D72524C6A70065296F /* car03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car03.png; sourceTree = "<group>"; };
+		1B4774D82524C6A80065296F /* car02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car02.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +69,14 @@
 			isa = PBXGroup;
 			children = (
 				1B4774B82524BBC50065296F /* AppDelegate.swift */,
+				1B4774D02524C25F0065296F /* CarsCollectionViewCell.swift */,
 				1B4774BA2524BBC50065296F /* SceneDelegate.swift */,
 				1B4774BC2524BBC50065296F /* ViewController.swift */,
+				1B4774D32524C37D0065296F /* Car.swift */,
 				1B4774BE2524BBC50065296F /* Main.storyboard */,
+				1B4774D82524C6A80065296F /* car02.png */,
+				1B4774D72524C6A70065296F /* car03.png */,
+				1B4774D62524C6A70065296F /* car04.png */,
 				1B4774CD2524BC550065296F /* car.png */,
 				1B4774C12524BBC60065296F /* Assets.xcassets */,
 				1B4774C32524BBC60065296F /* LaunchScreen.storyboard */,
@@ -127,10 +142,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B4774DB2524C6A80065296F /* car02.png in Resources */,
 				1B4774CE2524BC550065296F /* car.png in Resources */,
+				1B4774DA2524C6A80065296F /* car03.png in Resources */,
 				1B4774C52524BBC60065296F /* LaunchScreen.storyboard in Resources */,
 				1B4774C22524BBC60065296F /* Assets.xcassets in Resources */,
 				1B4774C02524BBC50065296F /* Main.storyboard in Resources */,
+				1B4774D92524C6A80065296F /* car04.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +161,9 @@
 			files = (
 				1B4774BD2524BBC50065296F /* ViewController.swift in Sources */,
 				1B4774B92524BBC50065296F /* AppDelegate.swift in Sources */,
+				1B4774D42524C37D0065296F /* Car.swift in Sources */,
 				1B4774BB2524BBC50065296F /* SceneDelegate.swift in Sources */,
+				1B4774D12524C25F0065296F /* CarsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
