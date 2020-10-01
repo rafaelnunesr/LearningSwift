@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B1541412525FD7800BB9899 /* PeopleViewControllerUITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1541402525FD7800BB9899 /* PeopleViewControllerUITableViewDelegate.swift */; };
+		1B1541442525FDA200BB9899 /* PeopleViewControllerUITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1541432525FDA200BB9899 /* PeopleViewControllerUITableViewDataSource.swift */; };
 		1B19D05E252566F100FB7677 /* avatarMan.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B19D05C252566F100FB7677 /* avatarMan.png */; };
 		1B19D05F252566F100FB7677 /* avatarWoman.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B19D05D252566F100FB7677 /* avatarWoman.png */; };
 		1B20478B2524D86200D874CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20478A2524D86200D874CF /* AppDelegate.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B1541402525FD7800BB9899 /* PeopleViewControllerUITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerUITableViewDelegate.swift; sourceTree = "<group>"; };
+		1B1541432525FDA200BB9899 /* PeopleViewControllerUITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewControllerUITableViewDataSource.swift; sourceTree = "<group>"; };
 		1B19D05C252566F100FB7677 /* avatarMan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatarMan.png; sourceTree = "<group>"; };
 		1B19D05D252566F100FB7677 /* avatarWoman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatarWoman.png; sourceTree = "<group>"; };
 		1B2047872524D86200D874CF /* Exe01_TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exe01_TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				1BA9DB2625254C3D009DF575 /* UILabelExtension.swift */,
+				1B1541402525FD7800BB9899 /* PeopleViewControllerUITableViewDelegate.swift */,
+				1B1541432525FDA200BB9899 /* PeopleViewControllerUITableViewDataSource.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -217,8 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B1541412525FD7800BB9899 /* PeopleViewControllerUITableViewDelegate.swift in Sources */,
 				1B20478B2524D86200D874CF /* AppDelegate.swift in Sources */,
 				1B20478D2524D86200D874CF /* SceneDelegate.swift in Sources */,
+				1B1541442525FDA200BB9899 /* PeopleViewControllerUITableViewDataSource.swift in Sources */,
 				1B2047AA2524E3F900D874CF /* Person.swift in Sources */,
 				1BD4123B25253C2B003E09FA /* PersonTableViewCell.swift in Sources */,
 				1BA9DB2725254C3D009DF575 /* UILabelExtension.swift in Sources */,

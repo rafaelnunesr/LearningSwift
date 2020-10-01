@@ -45,41 +45,14 @@ class PeopleViewController: UIViewController {
         arrayPeople.append(Person(photo: "avatarMan.png", name: "Paul King", responsability: "Commercial", email: "paul@email.com"))
         
         arrayPeople.append(Person(photo: "avatarMan.png", name: "Jorge Scott", responsability: "Customer Service", email: "jorge@email.com"))
+        
+        arrayPeople.append(Person(photo: "avatarWoman.png", name: "Bianca Blue", responsability: "IT - Support", email: "bianca@email.com"))
+        
+        arrayPeople.append(Person(photo: "avatarWoman.png", name: "Cindy Brown", responsability: "Customer Service", email: "cindy@email.com"))
+        
+        arrayPeople.append(Person(photo: "avatarMan.png", name: "Robert Trump", responsability: "iOS - Developer Senior", email: "robert@email.com"))
+        
+        arrayPeople.append(Person(photo: "avatarMan.png", name: "Martin Jerry", responsability: "Customer Service", email: "martin@email.com"))
     }
-    
-}
-
-extension PeopleViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if let personDetail = UIStoryboard(name: "PersonDetail", bundle: nil).instantiateInitialViewController() as? PersonDetailViewController {
-            
-            personDetail.person = arrayPeople[indexPath.row]
-            
-            present(personDetail, animated: true, completion: nil)
-            
-        }
-        
-    }
-    
-}
-
-extension PeopleViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return arrayPeople.count
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonTableViewCell", for: indexPath) as! PersonTableViewCell
-        
-        cell.setup(person: arrayPeople[indexPath.row])
-        
-        return cell
-        
-    }
-    
     
 }
