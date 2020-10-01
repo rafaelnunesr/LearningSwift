@@ -56,6 +56,7 @@
 		1BBA2FA12526404400382B91 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1BBA2FCE25264F9500382B91 /* AnimalsViewController */,
 				1BBA2FA22526405100382B91 /* AnimalViewController */,
 			);
 			path = ViewController;
@@ -68,6 +69,39 @@
 				1BBA2FA6252640B000382B91 /* Animal.storyboard */,
 			);
 			path = AnimalViewController;
+			sourceTree = "<group>";
+		};
+		1BBA2FCD25264F8800382B91 /* IMG */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1947125262F9000C5538E /* pet.png */,
+			);
+			path = IMG;
+			sourceTree = "<group>";
+		};
+		1BBA2FCE25264F9500382B91 /* AnimalsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1945025260DF300C5538E /* AnimalsViewController.swift */,
+				1BF1945225260DF300C5538E /* Main.storyboard */,
+			);
+			path = AnimalsViewController;
+			sourceTree = "<group>";
+		};
+		1BBA2FCF25264FB900382B91 /* Animal */ = {
+			isa = PBXGroup;
+			children = (
+				1BF1946525262AA500C5538E /* Animal.swift */,
+			);
+			path = Animal;
+			sourceTree = "<group>";
+		};
+		1BBA2FD025264FCF00382B91 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1BF19462252629AE00C5538E /* AnimalTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		1BF1944025260DF200C5538E = {
@@ -89,18 +123,16 @@
 		1BF1944B25260DF200C5538E /* Exe02_TableView */ = {
 			isa = PBXGroup;
 			children = (
+				1BBA2FD025264FCF00382B91 /* TableViewCell */,
+				1BBA2FCF25264FB900382B91 /* Animal */,
+				1BBA2FCD25264F8800382B91 /* IMG */,
 				1BBA2FA12526404400382B91 /* ViewController */,
 				1BF1946925262E9F00C5538E /* Extensions */,
 				1BF1944C25260DF300C5538E /* AppDelegate.swift */,
 				1BF1944E25260DF300C5538E /* SceneDelegate.swift */,
-				1BF1945025260DF300C5538E /* AnimalsViewController.swift */,
-				1BF1947125262F9000C5538E /* pet.png */,
-				1BF1945225260DF300C5538E /* Main.storyboard */,
 				1BF1945525260DF400C5538E /* Assets.xcassets */,
 				1BF1945725260DF400C5538E /* LaunchScreen.storyboard */,
 				1BF1945A25260DF400C5538E /* Info.plist */,
-				1BF19462252629AE00C5538E /* AnimalTableViewCell.swift */,
-				1BF1946525262AA500C5538E /* Animal.swift */,
 			);
 			path = Exe02_TableView;
 			sourceTree = "<group>";
