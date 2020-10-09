@@ -27,6 +27,8 @@ class ProdutosVC: UIViewController {
         self.produtosTableView.dataSource = self
         self.produtosTableView.delegate = self
         self.produtosTableView.tableFooterView = UIView(frame: .zero)
+        self.produtosTableView.register(UINib(nibName: "ProdutoTableViewCell", bundle: nil), forCellReuseIdentifier: "ProdutoTableViewCell")
+        
     }
     
     override func viewDidLoad() {
@@ -85,15 +87,14 @@ extension ProdutosVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = produtosTableView.dequeueReusableCell(withIdentifier: "ProdutoCell", for: indexPath)
+        
+        let cell: ProdutoTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "ProdutoTableViewCell", for: indexPath) as? ProdutoTableViewCell
         
         let arrayProdutosFiltrados = self.loadArrayFiltrado(section: indexPath.section)
         
+        cell?.setup(produto: arrayProdutosFiltrados[indexPath.row])
         
-        cell.textLabel?.text = arrayProdutosFiltrados[indexPath.row].nome
-        cell.detailTextLabel?.text = arrayProdutosFiltrados[indexPath.row].preco
-        print(indexPath.row)
-        return cell
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
