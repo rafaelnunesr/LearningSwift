@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JNu-pV-Gf1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Detail View Controller-->
+        <scene sceneID="oqw-oD-9aF">
+            <objects>
+                <viewController id="JNu-pV-Gf1" customClass="UserDetailViewController" customModule="DesafioCustomTableCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pgH-CD-ezw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m9B-AR-zsb">
+                                <rect key="frame" x="57" y="108" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="QRU-7k-wEd"/>
+                                    <constraint firstAttribute="height" constant="300" id="gjY-2V-kb6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7l8-au-zEE">
+                                <rect key="frame" x="57" y="440" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="QUU-vT-aGK"/>
+                                    <constraint firstAttribute="width" constant="300" id="QtA-Yj-9BZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="fUs-MW-XRU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO2-bz-dyu">
+                                <rect key="frame" x="57" y="478" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="KYQ-KW-iS1"/>
+                                    <constraint firstAttribute="height" constant="30" id="cGK-n2-Zac"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFy-wp-dyC">
+                                <rect key="frame" x="57" y="516" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="k8E-ao-ncC"/>
+                                    <constraint firstAttribute="height" constant="30" id="oh0-xo-2Cg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IbA-He-PmI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7l8-au-zEE" firstAttribute="centerX" secondItem="m9B-AR-zsb" secondAttribute="centerX" id="2pf-vc-LQL"/>
+                            <constraint firstItem="7l8-au-zEE" firstAttribute="top" secondItem="m9B-AR-zsb" secondAttribute="bottom" constant="32" id="H8b-3I-twV"/>
+                            <constraint firstItem="7l8-au-zEE" firstAttribute="top" secondItem="m9B-AR-zsb" secondAttribute="bottom" constant="32" id="M6T-NZ-TMg"/>
+                            <constraint firstItem="m9B-AR-zsb" firstAttribute="centerX" secondItem="pgH-CD-ezw" secondAttribute="centerX" id="NtK-lw-oIl"/>
+                            <constraint firstItem="mO2-bz-dyu" firstAttribute="top" secondItem="7l8-au-zEE" secondAttribute="bottom" constant="8" id="Ove-IH-GvR"/>
+                            <constraint firstItem="cFy-wp-dyC" firstAttribute="leading" secondItem="7l8-au-zEE" secondAttribute="leading" id="SLP-1x-2es"/>
+                            <constraint firstItem="cFy-wp-dyC" firstAttribute="centerX" secondItem="m9B-AR-zsb" secondAttribute="centerX" id="atw-jb-SeD"/>
+                            <constraint firstItem="mO2-bz-dyu" firstAttribute="centerX" secondItem="m9B-AR-zsb" secondAttribute="centerX" id="dRf-X6-lHV"/>
+                            <constraint firstItem="cFy-wp-dyC" firstAttribute="top" secondItem="mO2-bz-dyu" secondAttribute="bottom" constant="8" id="gPT-Kz-WYg"/>
+                            <constraint firstItem="mO2-bz-dyu" firstAttribute="leading" secondItem="7l8-au-zEE" secondAttribute="leading" id="h5U-LA-tcP"/>
+                            <constraint firstItem="m9B-AR-zsb" firstAttribute="top" secondItem="IbA-He-PmI" secondAttribute="top" constant="64" id="hWv-93-dfn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userEmailTextLabel" destination="mO2-bz-dyu" id="7Es-Sk-A2z"/>
+                        <outlet property="userNameTextLabel" destination="7l8-au-zEE" id="KXS-85-Uuf"/>
+                        <outlet property="userProfileImage" destination="m9B-AR-zsb" id="wLL-G4-zyY"/>
+                        <outlet property="userRegistrationTextLabel" destination="cFy-wp-dyC" id="OpO-mg-kfM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsS-eP-Klg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.623188405797109" y="52.901785714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
