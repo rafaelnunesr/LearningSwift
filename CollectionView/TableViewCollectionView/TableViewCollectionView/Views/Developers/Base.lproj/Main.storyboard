@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Developers View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DevelopersViewController" customModule="TableViewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VHA-Rt-Q0h">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ju3-Zg-czO">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ju3-Zg-czO" firstAttribute="top" secondItem="VHA-Rt-Q0h" secondAttribute="bottom" constant="4" id="1Y3-TR-tag"/>
+                            <constraint firstItem="ju3-Zg-czO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9aj-6W-Cbh"/>
+                            <constraint firstItem="VHA-Rt-Q0h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LA9-hc-CSc"/>
+                            <constraint firstItem="VHA-Rt-Q0h" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="M9b-yR-S8w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ju3-Zg-czO" secondAttribute="bottom" id="OPH-4b-rLJ"/>
+                            <constraint firstItem="ju3-Zg-czO" firstAttribute="top" secondItem="VHA-Rt-Q0h" secondAttribute="bottom" constant="4" id="eSP-Zn-Wai"/>
+                            <constraint firstItem="VHA-Rt-Q0h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nhs-JN-yz5"/>
+                            <constraint firstItem="ju3-Zg-czO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ofO-Gb-WML"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="developersTableView" destination="ju3-Zg-czO" id="EG9-ck-pOZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="76.339285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
