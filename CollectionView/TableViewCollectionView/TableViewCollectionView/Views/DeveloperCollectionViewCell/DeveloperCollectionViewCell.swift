@@ -22,7 +22,6 @@ class DeveloperCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupCell()
     }
     
     func setupCell() {

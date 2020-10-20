@@ -14,14 +14,25 @@ class DevelopersViewController: UIViewController {
     var developersCategory = [String]()
     var dictDevelopers: [String: [Developer]] = [:]
     
+    var collectionViewBackgroundColor = [UIColor]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         developersTableView.delegate = self
         developersTableView.dataSource = self
         developersTableView.register(DeveloperTableViewCell.nib(), forCellReuseIdentifier: DeveloperTableViewCell.identifier)
+        developersTableView.separatorStyle = .none
+        
+        setupDevelopersCategory()
         setupDevelopers()
         
+    }
+    
+    private func setupDevelopersCategory() {
+        developersCategory.append("iOS")
+        developersCategory.append("Android")
+        developersCategory.append("Web")
     }
     
     private func setupDevelopers() {
@@ -62,13 +73,16 @@ extension DevelopersViewController: UITableViewDelegate {
 
 extension DevelopersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return dictDevelopers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: DeveloperTableViewCell.identifier, for: indexPath) as! DeveloperTableViewCell
         
-        return cell ?? UITableViewCell()
+        let devs = developersCategory[indexPath.row]
+        cell.developers = dictDevelopers[devs] ?? []
+        
+        return cell
         
     }
 }

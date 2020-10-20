@@ -45,11 +45,12 @@ extension DeveloperTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DeveloperCollectionViewCell", for: indexPath) as! DeveloperCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DeveloperCollectionViewCell.identifier, for: indexPath) as! DeveloperCollectionViewCell
         
         cell.developer = developers[indexPath.row]
+        cell.setupCell()
         
-        return cell ?? UICollectionViewCell()
+        return cell
         
     }
 }

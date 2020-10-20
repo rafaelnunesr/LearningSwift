@@ -18,8 +18,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aGg-6Z-Cfx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="110" id="WsR-eZ-O4L"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xuf-Vf-aBh">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -30,9 +33,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="aGg-6Z-Cfx" secondAttribute="trailing" id="50S-Th-Fy3"/>
+                    <constraint firstItem="aGg-6Z-Cfx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5rS-8u-WBK"/>
+                    <constraint firstItem="aGg-6Z-Cfx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6NL-si-Nwm"/>
                     <constraint firstItem="aGg-6Z-Cfx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="byu-Xl-SV8"/>
+                    <constraint firstAttribute="trailing" secondItem="aGg-6Z-Cfx" secondAttribute="trailing" id="c8u-jH-G47"/>
                     <constraint firstAttribute="bottom" secondItem="aGg-6Z-Cfx" secondAttribute="bottom" id="h1A-AE-5eU"/>
                     <constraint firstItem="aGg-6Z-Cfx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hQo-hC-LQC"/>
+                    <constraint firstAttribute="bottom" secondItem="aGg-6Z-Cfx" secondAttribute="bottom" id="rOR-GI-kiZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
