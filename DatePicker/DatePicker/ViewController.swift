@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         
         dateFormatter.dateStyle = DateFormatter.Style.short
         dateFormatter.timeStyle = DateFormatter.Style.short
+        dateFormatter.locale = Locale(identifier: "pt_BR")
         
         let strDate = dateFormatter.string(from: datePicker.date)
         print(strDate)
