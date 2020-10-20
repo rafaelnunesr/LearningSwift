@@ -33,6 +33,16 @@ extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(self.arrayEventos[indexPath.row])
+        
+        //self.performSegue(withIdentifier: "DetalheViewController", sender: self.arrayEventos[indexPath.row])
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let evento: Evento?  = sender as? Evento
+        let vc = segue.destination as? DetalheViewController
+        vc?.evento = evento
     }
     
 }
@@ -47,8 +57,19 @@ extension ViewController: UICollectionViewDataSource {
         let cell: MyCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as? MyCollectionViewCell
         
         cell?.setup(evento: arrayEventos[indexPath.row])
+        cell?.delegate = self
         
         return cell ?? UICollectionViewCell()
         
     }
+}
+
+extension ViewController: MyCollectionViewCellDelegate {
+    func goDetailEvent(value: Evento?) {
+        print("ViewController ===> MyCollectionViewdelegate ==> goDetailEvent ==> goDetailEvent==============>")
+        
+        self.performSegue(withIdentifier: "DetalheViewController", sender: value)
+    }
+    
+    
 }

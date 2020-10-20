@@ -51,11 +51,53 @@
                     </view>
                     <connections>
                         <outlet property="myCollection" destination="pHe-9l-rCZ" id="KFI-RA-EP0"/>
+                        <segue destination="7b7-pw-Hve" kind="presentation" identifier="DetalheViewController" id="yxe-f2-aUy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-146.37681159420291" y="76.339285714285708"/>
+        </scene>
+        <!--Detalhe View Controller-->
+        <scene sceneID="JDt-kE-0PJ">
+            <objects>
+                <viewController id="7b7-pw-Hve" customClass="DetalheViewController" customModule="CollectionViewDigitalHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zv5-57-Tr8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YAT-bT-8aF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="F0o-1J-hd8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBc-SX-a5t">
+                                <rect key="frame" x="0.0" y="330" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HhQ-O6-rVl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HhQ-O6-rVl" firstAttribute="trailing" secondItem="MBc-SX-a5t" secondAttribute="trailing" id="Kd5-7n-wek"/>
+                            <constraint firstItem="MBc-SX-a5t" firstAttribute="top" secondItem="YAT-bT-8aF" secondAttribute="bottom" constant="30" id="Kke-vM-07k"/>
+                            <constraint firstItem="YAT-bT-8aF" firstAttribute="leading" secondItem="HhQ-O6-rVl" secondAttribute="leading" id="XdH-5A-0Y7"/>
+                            <constraint firstItem="MBc-SX-a5t" firstAttribute="leading" secondItem="HhQ-O6-rVl" secondAttribute="leading" id="kxo-t4-tZJ"/>
+                            <constraint firstItem="YAT-bT-8aF" firstAttribute="top" secondItem="HhQ-O6-rVl" secondAttribute="top" id="oaB-7b-4eu"/>
+                            <constraint firstItem="YAT-bT-8aF" firstAttribute="trailing" secondItem="HhQ-O6-rVl" secondAttribute="trailing" id="zST-OX-q6F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="eventoDetalheView" destination="MBc-SX-a5t" id="HoM-Vy-DUl"/>
+                        <outlet property="eventoImageView" destination="YAT-bT-8aF" id="2wz-QB-7xL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNM-BI-pP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714.49275362318849" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>

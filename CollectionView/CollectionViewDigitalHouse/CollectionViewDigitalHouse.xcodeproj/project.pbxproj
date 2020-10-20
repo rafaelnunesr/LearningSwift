@@ -16,6 +16,7 @@
 		1B1CC02E253A627E001DEDDE /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CC02C253A627E001DEDDE /* MyCollectionViewCell.swift */; };
 		1B1CC02F253A627E001DEDDE /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B1CC02D253A627E001DEDDE /* MyCollectionViewCell.xib */; };
 		1B1CC033253A68A2001DEDDE /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CC032253A68A2001DEDDE /* Evento.swift */; };
+		1B88F75B253E581B00A6A819 /* DetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B88F75A253E581B00A6A819 /* DetalheViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1B1CC02C253A627E001DEDDE /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		1B1CC02D253A627E001DEDDE /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		1B1CC032253A68A2001DEDDE /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
+		1B88F75A253E581B00A6A819 /* DetalheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				1B1CC01B253A5ECD001DEDDE /* Main.storyboard */,
 				1B1CC02C253A627E001DEDDE /* MyCollectionViewCell.swift */,
 				1B1CC02D253A627E001DEDDE /* MyCollectionViewCell.xib */,
+				1B88F75A253E581B00A6A819 /* DetalheViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			files = (
 				1B1CC01A253A5ECD001DEDDE /* ViewController.swift in Sources */,
 				1B1CC016253A5ECD001DEDDE /* AppDelegate.swift in Sources */,
+				1B88F75B253E581B00A6A819 /* DetalheViewController.swift in Sources */,
 				1B1CC02E253A627E001DEDDE /* MyCollectionViewCell.swift in Sources */,
 				1B1CC018253A5ECD001DEDDE /* SceneDelegate.swift in Sources */,
 				1B1CC033253A68A2001DEDDE /* Evento.swift in Sources */,
