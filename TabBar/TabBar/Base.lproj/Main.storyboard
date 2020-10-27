@@ -11,7 +11,7 @@
         <!--Extrato-->
         <scene sceneID="oXN-cF-LQ5">
             <objects>
-                <viewController id="Enm-xn-oUf" customClass="SecondVC" customModule="TabBar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Enm-xn-oUf" customClass="AccountBalanceVC" customModule="TabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rCa-Ld-wSp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,17 +55,32 @@
             </objects>
             <point key="canvasLocation" x="1919" y="-569"/>
         </scene>
-        <!--Contas-->
+        <!--CreditCard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FirstVC" customModule="TabBar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CreditCardVC" customModule="TabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OnT-uQ-X3b">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OnT-uQ-X3b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="36x-d0-OPJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OnT-uQ-X3b" secondAttribute="trailing" id="Ojw-d6-y9s"/>
+                            <constraint firstItem="OnT-uQ-X3b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kNM-7A-0f1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OnT-uQ-X3b" secondAttribute="bottom" id="xQq-WH-YTS"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contas" image="barcode" catalog="system" id="KIa-Ui-VkI"/>
+                    <tabBarItem key="tabBarItem" title="CreditCard" image="creditcard.fill" catalog="system" id="KIa-Ui-VkI"/>
+                    <connections>
+                        <outlet property="tableView" destination="OnT-uQ-X3b" id="0Iv-z4-54l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,7 +110,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="barcode" catalog="system" width="128" height="93"/>
+        <image name="creditcard.fill" catalog="system" width="128" height="88"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <systemColor name="systemBackgroundColor">

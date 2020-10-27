@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondVC: UIViewController {
+class AccountBalanceVC: UIViewController {
 
     @IBOutlet weak var timeLineTableView: UITableView!
     
@@ -50,7 +50,7 @@ class SecondVC: UIViewController {
     }
 }
 
-extension SecondVC: UITableViewDelegate, UITableViewDataSource {
+extension AccountBalanceVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayLancamentos.count
     }
