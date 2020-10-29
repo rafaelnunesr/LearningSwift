@@ -13,6 +13,10 @@
 		1B103F6D25478C11009B4837 /* CreditCardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B103F6B25478C11009B4837 /* CreditCardCollectionCell.swift */; };
 		1B103F6E25478C11009B4837 /* CreditCardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B103F6C25478C11009B4837 /* CreditCardCollectionCell.xib */; };
 		1B103F712547911E009B4837 /* Cartoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B103F702547911E009B4837 /* Cartoes.swift */; };
+		1B22E647254A3BB200DBC882 /* InvoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22E646254A3BB200DBC882 /* InvoiceVC.swift */; };
+		1B22E64B254A44C300DBC882 /* Invoice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B22E64A254A44C300DBC882 /* Invoice.storyboard */; };
+		1B22E64F254A4A6000DBC882 /* invoice.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B22E64E254A4A6000DBC882 /* invoice.json */; };
+		1B22E652254A549600DBC882 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22E651254A549600DBC882 /* Invoice.swift */; };
 		1BCC6DA42543A48300A426B6 /* Movimentacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC6DA32543A48300A426B6 /* Movimentacao.swift */; };
 		1BCC6DA82543A7F600A426B6 /* despesas.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BCC6DA72543A7F600A426B6 /* despesas.json */; };
 		1BCEFB072543914B005BB0C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEFB062543914B005BB0C6 /* AppDelegate.swift */; };
@@ -34,6 +38,10 @@
 		1B103F6B25478C11009B4837 /* CreditCardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardCollectionCell.swift; sourceTree = "<group>"; };
 		1B103F6C25478C11009B4837 /* CreditCardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardCollectionCell.xib; sourceTree = "<group>"; };
 		1B103F702547911E009B4837 /* Cartoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartoes.swift; sourceTree = "<group>"; };
+		1B22E646254A3BB200DBC882 /* InvoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceVC.swift; sourceTree = "<group>"; };
+		1B22E64A254A44C300DBC882 /* Invoice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Invoice.storyboard; sourceTree = "<group>"; };
+		1B22E64E254A4A6000DBC882 /* invoice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invoice.json; sourceTree = "<group>"; };
+		1B22E651254A549600DBC882 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
 		1BCC6DA32543A48300A426B6 /* Movimentacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movimentacao.swift; sourceTree = "<group>"; };
 		1BCC6DA72543A7F600A426B6 /* despesas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = despesas.json; sourceTree = "<group>"; };
 		1BCEFB032543914B005BB0C6 /* TabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +72,7 @@
 		1B103F6025478578009B4837 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1B22E645254A3B4300DBC882 /* Fatura */,
 				1B103F62254785B2009B4837 /* CreditCard */,
 				1B103F612547858F009B4837 /* AccountBalance */,
 				1BCEFB1F25439D66005BB0C6 /* ThirdVC.swift */,
@@ -93,13 +102,24 @@
 			path = CreditCard;
 			sourceTree = "<group>";
 		};
+		1B22E645254A3B4300DBC882 /* Fatura */ = {
+			isa = PBXGroup;
+			children = (
+				1B22E646254A3BB200DBC882 /* InvoiceVC.swift */,
+				1B22E64A254A44C300DBC882 /* Invoice.storyboard */,
+			);
+			path = Fatura;
+			sourceTree = "<group>";
+		};
 		1BCC6DA22543A47200A426B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1B22E64E254A4A6000DBC882 /* invoice.json */,
 				1B103F68254787F0009B4837 /* cartoes.json */,
 				1BCC6DA72543A7F600A426B6 /* despesas.json */,
 				1BCC6DA32543A48300A426B6 /* Movimentacao.swift */,
 				1B103F702547911E009B4837 /* Cartoes.swift */,
+				1B22E651254A549600DBC882 /* Invoice.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,8 +218,10 @@
 				1BCEFB0E2543914B005BB0C6 /* Main.storyboard in Resources */,
 				1B103F69254787F0009B4837 /* cartoes.json in Resources */,
 				1BCEFB2625439F1C005BB0C6 /* ExtratoCell.xib in Resources */,
+				1B22E64B254A44C300DBC882 /* Invoice.storyboard in Resources */,
 				1B103F6E25478C11009B4837 /* CreditCardCollectionCell.xib in Resources */,
 				1BCC6DA82543A7F600A426B6 /* despesas.json in Resources */,
+				1B22E64F254A4A6000DBC882 /* invoice.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B22E647254A3BB200DBC882 /* InvoiceVC.swift in Sources */,
+				1B22E652254A549600DBC882 /* Invoice.swift in Sources */,
 				1B103F6D25478C11009B4837 /* CreditCardCollectionCell.swift in Sources */,
 				1B103F6525478655009B4837 /* CreditCardContainerCell.swift in Sources */,
 				1BCEFB0B2543914B005BB0C6 /* CreditCardVC.swift in Sources */,

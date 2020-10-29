@@ -7,7 +7,15 @@
 
 import UIKit
 
+protocol CreditCardContainerCellDelegate: class {
+    
+    func tappedCreditCard(withID: String)
+    
+}
+
 class CreditCardContainerCell: UITableViewCell {
+    
+    weak var delegate: CreditCardContainerCellDelegate?
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -25,11 +33,18 @@ class CreditCardContainerCell: UITableViewCell {
     }
     
     
-    func setup(value: Cartoes?) {
+    func setup(value: Cartoes?, delegate: CreditCardContainerCell?) {
         self.collectionView.register(UINib(nibName: "CreditCardCollectionCell", bundle: nil), forCellWithReuseIdentifier: "CreditCardCollectionCell")
         self.cartoes = value
+        self.delegate = delegate
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        self.delegate?.tappedCreditCard(withID: cartoes?.cartoes[indexPath.row].id ?? "")
+        
     }
     
     
@@ -47,6 +62,19 @@ extension CreditCardContainerCell: UICollectionViewDelegate, UICollectionViewDat
         cell?.setup(value: cartoes?.cartoes[indexPath.row])
         
         return cell ?? UICollectionViewCell()
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let view = UIStoryboard(name: "Invoice", bundle: nil).instantiateInitialViewController() {
+            
+            print("done")
+            
+            UINavigationController().pushViewController(view, animated: true)
+                //navigationController?.pushViewController(view, animated: true)
+                }
+        
         
     }
     

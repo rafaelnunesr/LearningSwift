@@ -18,14 +18,25 @@ class CreditCardVC: UIViewController {
     
     self.tableView.register(UINib(nibName: "CreditCardContainerCell", bundle: nil), forCellReuseIdentifier: "CreditCardContainerCell")
     self.cartoes = self.loadCreditCard()
-    if let _cartoes = self.cartoes {
+    
+    if self.cartoes != nil {
         
       self.tableView.delegate = self
       self.tableView.dataSource = self
     }
+    
+    self.tableView.tableFooterView = UIView()
+    
     print("CreditCardVC----viewDidLoad")
     // Do any additional setup after loading the view.
   }
+    
+    
+    @IBAction func tappedPerfilButton(_ sender: UIBarButtonItem) {
+        
+        print("tappedPerfilButton")
+    }
+    
     
   private func loadCreditCard() -> Cartoes? {
     if let path = Bundle.main.path(forResource: "cartoes", ofType: "json"){
@@ -53,11 +64,17 @@ extension CreditCardVC: UITableViewDelegate, UITableViewDataSource {
         
         let cell: CreditCardContainerCell? = tableView.dequeueReusableCell(withIdentifier: "CreditCardContainerCell", for: indexPath) as? CreditCardContainerCell
         
-        cell?.setup(value: self.cartoes)
+        cell?.setup(value: self.cartoes, delegate: self)
         
         return cell ?? UITableViewCell()
         
     }
     
     
+}
+
+extension CreditCardVC: CreditCardContainerCellDelegate {
+    func tappedCreditCard(withID: String) {
+        print("tappedCreditCard ==>\(withID)")
+    }
 }

@@ -15,6 +15,7 @@ class CreditCardCollectionCell: UICollectionViewCell {
     @IBOutlet weak var flagImage: UIImageView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var lineView: UIView!
+    @IBOutlet weak var cardBackgroundView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +29,11 @@ class CreditCardCollectionCell: UICollectionViewCell {
             self.numberLabel.text = _value.numero
             self.dateLabel.text = _value.data
             self.flagImage.image = UIImage(named: _value.bandeira)
+            self.cardBackgroundView.image = UIImage(named: "fundo-visa")
+            
+            self.cardBackgroundView.layer.cornerRadius = 4
+            self.containerView.layer.cornerRadius = 4
+            
             
             if _value.bandeira == "mastercard" {
                 self.containerView.backgroundColor = .black
@@ -35,6 +41,7 @@ class CreditCardCollectionCell: UICollectionViewCell {
                 self.numberLabel.textColor = .lightGray
                 self.dateLabel.textColor = .lightGray
                 self.lineView.backgroundColor = .lightGray
+                self.cardBackgroundView.image = UIImage(named: "fundo-master")
             }
         }
         
