@@ -72,7 +72,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="OnT-uQ-X3b" id="0Iv-z4-54l"/>
-                        <segue destination="Hbu-Br-TSX" kind="show" id="xaA-AI-mOp"/>
+                        <segue destination="Hbu-Br-TSX" kind="show" identifier="InvoiceVC" id="xaA-AI-mOp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -135,6 +135,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5og-nO-6gW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qhA-xC-ALf">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

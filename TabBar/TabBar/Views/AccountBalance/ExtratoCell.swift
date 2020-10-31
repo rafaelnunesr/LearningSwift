@@ -21,6 +21,29 @@ class ExtratoCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func setup(value: Invoice?) {
+        
+        if let _value = value {
+            self.descriptionLabel.text = _value.nome
+            self.valueLabel.text = "R$ \(String(format: "%.2f", _value.valor ?? 0))"
+            
+            if _value.tipo?.rawValue == "E" {
+                //self.descriptionLabel.textColor = .green
+                //self.valueLabel.textColor = .green
+                self.extratoImage.image = UIImage.init(systemName: "dollarsign.circle")
+                self.extratoImage.tintColor = UIColor(rgb: 0xA3F7AC)
+                
+                
+            }else {
+                //self.descriptionLabel.textColor = .red
+                self.valueLabel.textColor = .red
+                self.valueLabel.text = "R$ \(String(format: "%.2f", _value.valor ?? 0))"
+                self.extratoImage.image = UIImage.init(systemName: "dollarsign.circle")
+                self.extratoImage.tintColor = .red
+            }
+        }
+    }
+    
     func setup(value: LancamentoElement?) {
         
         if let _value = value {

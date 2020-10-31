@@ -9,14 +9,14 @@ import UIKit
 
 protocol CreditCardContainerCellDelegate: class {
     
-    func tappedCreditCard(withID: String)
-    
+    func tappedCreditCardWith(id: String)
 }
 
 class CreditCardContainerCell: UITableViewCell {
+   
     
     weak var delegate: CreditCardContainerCellDelegate?
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var cartoes: Cartoes?
@@ -32,25 +32,18 @@ class CreditCardContainerCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
-    func setup(value: Cartoes?, delegate: CreditCardContainerCell?) {
+    func setup(value: Cartoes?, delegate: CreditCardContainerCellDelegate?) {
+        
         self.collectionView.register(UINib(nibName: "CreditCardCollectionCell", bundle: nil), forCellWithReuseIdentifier: "CreditCardCollectionCell")
         self.cartoes = value
         self.delegate = delegate
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        
-        self.delegate?.tappedCreditCard(withID: cartoes?.cartoes[indexPath.row].id ?? "")
-        
-    }
-    
-    
 }
 
 extension CreditCardContainerCell: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.cartoes?.cartoes.count ?? 0
     }
@@ -62,21 +55,10 @@ extension CreditCardContainerCell: UICollectionViewDelegate, UICollectionViewDat
         cell?.setup(value: cartoes?.cartoes[indexPath.row])
         
         return cell ?? UICollectionViewCell()
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if let view = UIStoryboard(name: "Invoice", bundle: nil).instantiateInitialViewController() {
-            
-            print("done")
-            
-            UINavigationController().pushViewController(view, animated: true)
-                //navigationController?.pushViewController(view, animated: true)
-                }
-        
-        
+        self.delegate?.tappedCreditCardWith(id: cartoes?.cartoes[indexPath.row].id ?? "")
     }
-    
-    
 }
