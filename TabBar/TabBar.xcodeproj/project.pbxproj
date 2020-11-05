@@ -29,6 +29,7 @@
 		1BCEFB2025439D66005BB0C6 /* ThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEFB1F25439D66005BB0C6 /* ThirdVC.swift */; };
 		1BCEFB2525439F1C005BB0C6 /* ExtratoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEFB2325439F1C005BB0C6 /* ExtratoCell.swift */; };
 		1BCEFB2625439F1C005BB0C6 /* ExtratoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCEFB2425439F1C005BB0C6 /* ExtratoCell.xib */; };
+		1BE837672553874A005F162F /* AccountBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE837662553874A005F162F /* AccountBalanceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		1BCEFB1F25439D66005BB0C6 /* ThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdVC.swift; sourceTree = "<group>"; };
 		1BCEFB2325439F1C005BB0C6 /* ExtratoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtratoCell.swift; sourceTree = "<group>"; };
 		1BCEFB2425439F1C005BB0C6 /* ExtratoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtratoCell.xib; sourceTree = "<group>"; };
+		1BE837662553874A005F162F /* AccountBalanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		1BCEFB052543914B005BB0C6 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				1BE8376425536EE5005F162F /* Controller */,
 				1B103F6025478578009B4837 /* Views */,
 				1BCC6DA22543A47200A426B6 /* Model */,
 				1BCEFB062543914B005BB0C6 /* AppDelegate.swift */,
@@ -153,6 +156,14 @@
 				1BCEFB142543914C005BB0C6 /* Info.plist */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		1BE8376425536EE5005F162F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1BE837662553874A005F162F /* AccountBalanceController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE837672553874A005F162F /* AccountBalanceController.swift in Sources */,
 				1B22E647254A3BB200DBC882 /* InvoiceVC.swift in Sources */,
 				1B22E652254A549600DBC882 /* Invoice.swift in Sources */,
 				1B103F6D25478C11009B4837 /* CreditCardCollectionCell.swift in Sources */,
