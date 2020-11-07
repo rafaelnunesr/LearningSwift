@@ -11,7 +11,6 @@ struct Movimentacao: Codable {
     
     let lancamentos: [LancamentoElement]
     
-    
 }
 
 struct LancamentoElement: Codable {
