@@ -20,6 +20,8 @@
 		1B22E64F254A4A6000DBC882 /* invoice.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B22E64E254A4A6000DBC882 /* invoice.json */; };
 		1B22E652254A549600DBC882 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22E651254A549600DBC882 /* Invoice.swift */; };
 		1B5122C7255634C300C55FCE /* CreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5122C6255634C300C55FCE /* CreditCardController.swift */; };
+		1BBBEFC1255C9F1700937D70 /* AddCreditCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BBBEFC0255C9F1700937D70 /* AddCreditCard.storyboard */; };
+		1BBBEFC4255C9FF800937D70 /* AddCreditCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBEFC3255C9FF800937D70 /* AddCreditCardVC.swift */; };
 		1BCC6DA42543A48300A426B6 /* Movimentacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC6DA32543A48300A426B6 /* Movimentacao.swift */; };
 		1BCC6DA82543A7F600A426B6 /* despesas.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BCC6DA72543A7F600A426B6 /* despesas.json */; };
 		1BCEFB072543914B005BB0C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEFB062543914B005BB0C6 /* AppDelegate.swift */; };
@@ -48,6 +50,8 @@
 		1B22E64E254A4A6000DBC882 /* invoice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invoice.json; sourceTree = "<group>"; };
 		1B22E651254A549600DBC882 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
 		1B5122C6255634C300C55FCE /* CreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardController.swift; sourceTree = "<group>"; };
+		1BBBEFC0255C9F1700937D70 /* AddCreditCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCreditCard.storyboard; sourceTree = "<group>"; };
+		1BBBEFC3255C9FF800937D70 /* AddCreditCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardVC.swift; sourceTree = "<group>"; };
 		1BCC6DA32543A48300A426B6 /* Movimentacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movimentacao.swift; sourceTree = "<group>"; };
 		1BCC6DA72543A7F600A426B6 /* despesas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = despesas.json; sourceTree = "<group>"; };
 		1BCEFB032543914B005BB0C6 /* TabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +121,14 @@
 			path = Invoice;
 			sourceTree = "<group>";
 		};
+		1BBBEFC6255CA00300937D70 /* AddCreditCardVC */ = {
+			isa = PBXGroup;
+			children = (
+				1BBBEFC3255C9FF800937D70 /* AddCreditCardVC.swift */,
+			);
+			path = AddCreditCardVC;
+			sourceTree = "<group>";
+		};
 		1BCC6DA22543A47200A426B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +161,7 @@
 		1BCEFB052543914B005BB0C6 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				1BBBEFC6255CA00300937D70 /* AddCreditCardVC */,
 				1B164A36255A069200B8C82B /* CustomView */,
 				1B103F612547858F009B4837 /* AccountBalance */,
 				1B103F62254785B2009B4837 /* CreditCard */,
@@ -157,6 +170,7 @@
 				1BCEFB062543914B005BB0C6 /* AppDelegate.swift */,
 				1BCEFB082543914B005BB0C6 /* SceneDelegate.swift */,
 				1BCEFB0C2543914B005BB0C6 /* Main.storyboard */,
+				1BBBEFC0255C9F1700937D70 /* AddCreditCard.storyboard */,
 				1BCEFB0F2543914C005BB0C6 /* Assets.xcassets */,
 				1BCEFB112543914C005BB0C6 /* LaunchScreen.storyboard */,
 				1BCEFB142543914C005BB0C6 /* Info.plist */,
@@ -228,6 +242,7 @@
 				1BCEFB0E2543914B005BB0C6 /* Main.storyboard in Resources */,
 				1B103F69254787F0009B4837 /* cartoes.json in Resources */,
 				1BCEFB2625439F1C005BB0C6 /* ExtratoCell.xib in Resources */,
+				1BBBEFC1255C9F1700937D70 /* AddCreditCard.storyboard in Resources */,
 				1B103F6E25478C11009B4837 /* CreditCardCollectionCell.xib in Resources */,
 				1BCC6DA82543A7F600A426B6 /* despesas.json in Resources */,
 				1B22E64F254A4A6000DBC882 /* invoice.json in Resources */,
@@ -248,6 +263,7 @@
 				1B103F6D25478C11009B4837 /* CreditCardCollectionCell.swift in Sources */,
 				1B103F6525478655009B4837 /* CreditCardContainerCell.swift in Sources */,
 				1BCEFB0B2543914B005BB0C6 /* CreditCardVC.swift in Sources */,
+				1BBBEFC4255C9FF800937D70 /* AddCreditCardVC.swift in Sources */,
 				1BCEFB2525439F1C005BB0C6 /* ExtratoCell.swift in Sources */,
 				1BCEFB072543914B005BB0C6 /* AppDelegate.swift in Sources */,
 				1BCEFB1C25439617005BB0C6 /* AccountBalanceVC.swift in Sources */,
@@ -408,10 +424,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafa.TabBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -426,10 +443,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafa.TabBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
