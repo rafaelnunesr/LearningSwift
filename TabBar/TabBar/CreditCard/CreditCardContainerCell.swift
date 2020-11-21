@@ -30,7 +30,7 @@ class CreditCardContainerCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setup(value: Cartoes?, delegate: CreditCardContainerCellDelegate?) {
+    func setup(value: Cartoes?, delegate: CreditCardContainerCellDelegate?, isReload: Bool = false) {
         
         self.collectionView.register(UINib(nibName: "CreditCardCollectionCell", bundle: nil), forCellWithReuseIdentifier: "CreditCardCollectionCell")
         
@@ -40,6 +40,11 @@ class CreditCardContainerCell: UITableViewCell {
         self.delegate = delegate
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        
+        if isReload {
+            self.collectionView.reloadData()
+        }
+        //self.collectionView.reloadData()
     }
 }
 

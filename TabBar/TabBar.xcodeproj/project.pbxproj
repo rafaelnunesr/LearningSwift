@@ -33,6 +33,7 @@
 		1BCEFB1C25439617005BB0C6 /* AccountBalanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEFB1B25439617005BB0C6 /* AccountBalanceVC.swift */; };
 		1BCEFB2525439F1C005BB0C6 /* ExtratoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCEFB2325439F1C005BB0C6 /* ExtratoCell.swift */; };
 		1BCEFB2625439F1C005BB0C6 /* ExtratoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCEFB2425439F1C005BB0C6 /* ExtratoCell.xib */; };
+		1BE25412256895BB009059AF /* AddCreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE25411256895BB009059AF /* AddCreditCardController.swift */; };
 		1BE837672553874A005F162F /* AccountBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE837662553874A005F162F /* AccountBalanceController.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		1BCEFB1B25439617005BB0C6 /* AccountBalanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceVC.swift; sourceTree = "<group>"; };
 		1BCEFB2325439F1C005BB0C6 /* ExtratoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtratoCell.swift; sourceTree = "<group>"; };
 		1BCEFB2425439F1C005BB0C6 /* ExtratoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtratoCell.xib; sourceTree = "<group>"; };
+		1BE25411256895BB009059AF /* AddCreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardController.swift; sourceTree = "<group>"; };
 		1BE837662553874A005F162F /* AccountBalanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				1BBBEFC3255C9FF800937D70 /* AddCreditCardVC.swift */,
+				1BE25411256895BB009059AF /* AddCreditCardController.swift */,
 			);
 			path = AddCreditCardVC;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				1BCEFB1C25439617005BB0C6 /* AccountBalanceVC.swift in Sources */,
 				1B164A322559FD4D00B8C82B /* InvoiceController.swift in Sources */,
 				1BCEFB092543914B005BB0C6 /* SceneDelegate.swift in Sources */,
+				1BE25412256895BB009059AF /* AddCreditCardController.swift in Sources */,
 				1B103F712547911E009B4837 /* Cartoes.swift in Sources */,
 				1B164A39255A06BB00B8C82B /* ButtonCollectionCell.swift in Sources */,
 				1BCC6DA42543A48300A426B6 /* Movimentacao.swift in Sources */,

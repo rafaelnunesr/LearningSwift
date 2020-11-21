@@ -7,15 +7,14 @@
 
 import UIKit
 
-
-protocol AddCreditCardVCDelegte: class {
+protocol AddCreditCardVCDelegate: class {
     
     func success(value: CartoesElement?)
 }
 
 class AddCreditCardVC: UIViewController {
     
-    weak var delegate: AddCreditCardVCDelegte?
+    weak var delegate: AddCreditCardVCDelegate?
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var numberCardTextField: UITextField!
@@ -24,6 +23,8 @@ class AddCreditCardVC: UIViewController {
     @IBOutlet weak var photoButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     private let datePicker = UIDatePicker()
+    
+    private var controller: AddCreditCardController = AddCreditCardController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,7 +127,11 @@ class AddCreditCardVC: UIViewController {
             
             let button = UIAlertAction(title: "OK", style: .default) { (success) in
                 
-                self.delegate?.success(value: self.saveCreditCard())
+                
+                self.controller.saveCreditCard(name: self.nameTextField.text, date: self.dateTextField.text, number: self.numberCardTextField.text, flag: self.flagSegmented.selectedSegmentIndex)
+                
+                self.delegate?.success(value: self.controller.creditCardSaved)
+                
                 self.dismiss(animated: true, completion: nil)
             }
             
@@ -144,16 +149,6 @@ class AddCreditCardVC: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
-    
-    private func saveCreditCard() -> CartoesElement? {
-        
-        let card: CartoesElement? = CartoesElement(id: String(Int.random(in: 1...1000)), nome: self.nameTextField.text ?? "", data: self.dateTextField.text ?? "", numero: self.numberCardTextField.text ?? "", bandeira: Flag.loadFlag(index: self.flagSegmented.selectedSegmentIndex).rawValue)
-        
-        return card
-    }
-    
-    
     
     private func checkFields() -> Bool {
         
