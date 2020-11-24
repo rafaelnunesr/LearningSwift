@@ -8,7 +8,7 @@
 import UIKit
 
 class CreditCardVC: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var controller: CreditCardController = CreditCardController()
@@ -17,6 +17,7 @@ class CreditCardVC: UIViewController {
         super.viewDidLoad()
         
         self.tableView.register(UINib(nibName: "CreditCardContainerCell", bundle: nil), forCellReuseIdentifier: "CreditCardContainerCell")
+        
         
         self.controller.loadCreditCard { (result, error) in
             
@@ -62,30 +63,34 @@ extension CreditCardVC: UITableViewDelegate, UITableViewDataSource {
         if segue.identifier == "InvoiceVC" {
             let vc:InvoiceVC? = segue.destination as? InvoiceVC
             vc?.setup(cardID: sender as? String)
-        }else if segue.identifier == "AddCreditCardVC"{
-            let vc: AddCreditCardVC? = segue.destination as? AddCreditCardVC
+        
+        }else if segue.identifier == "AddCreditCardVC" {
+            let vc: AddCreditCardVC? =  segue.destination as? AddCreditCardVC
             vc?.delegate = self
         }
     }
 }
 
-extension CreditCardVC: AddCreditCardVCDelegate {
+
+extension CreditCardVC: AddCreditCardVCDelegte {
+   
     func success(value: CartoesElement?) {
         print(value?.nome)
         
         self.controller.appendCreditCard(value: value)
         self.tableView.reloadData()
     }
-
 }
 
+
 extension CreditCardVC: CreditCardContainerCellDelegate {
+   
     func tappedAddCreditCardButton() {
         
         self.performSegue(withIdentifier: "AddCreditCardVC", sender: nil)
-        print("CreditCardVC ==> ButtonCollectionCellDelegate ==> tappedButton")
+        print("CreditCardVC===>CreditCardContainerCellDelegate===>tappedAddCredCardButton")
+        
     }
-    
     
     func tappedCreditCardWith(id: String) {
         
