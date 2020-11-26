@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,9 @@
 		1B22E64F254A4A6000DBC882 /* invoice.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B22E64E254A4A6000DBC882 /* invoice.json */; };
 		1B22E652254A549600DBC882 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B22E651254A549600DBC882 /* Invoice.swift */; };
 		1B5122C7255634C300C55FCE /* CreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5122C6255634C300C55FCE /* CreditCardController.swift */; };
+		1B8472FF256F2E1600A27BAC /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B8472FE256F2E1600A27BAC /* loading.json */; };
+		1B847306256F3A9C00A27BAC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B847305256F3A9C00A27BAC /* LoadingView.swift */; };
+		1B847309256F3AB700A27BAC /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B847308256F3AB700A27BAC /* LoadingView.xib */; };
 		1BBBEFC1255C9F1700937D70 /* AddCreditCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BBBEFC0255C9F1700937D70 /* AddCreditCard.storyboard */; };
 		1BBBEFC4255C9FF800937D70 /* AddCreditCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBBEFC3255C9FF800937D70 /* AddCreditCardVC.swift */; };
 		1BCC6DA42543A48300A426B6 /* Movimentacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCC6DA32543A48300A426B6 /* Movimentacao.swift */; };
@@ -35,6 +38,7 @@
 		1BCEFB2625439F1C005BB0C6 /* ExtratoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCEFB2425439F1C005BB0C6 /* ExtratoCell.xib */; };
 		1BE25412256895BB009059AF /* AddCreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE25411256895BB009059AF /* AddCreditCardController.swift */; };
 		1BE837672553874A005F162F /* AccountBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE837662553874A005F162F /* AccountBalanceController.swift */; };
+		5F03A182E82D73C011E33B79 /* Pods_TabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF8263C6FB8CFEB4AAC7D6B /* Pods_TabBar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,9 @@
 		1B22E64E254A4A6000DBC882 /* invoice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invoice.json; sourceTree = "<group>"; };
 		1B22E651254A549600DBC882 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
 		1B5122C6255634C300C55FCE /* CreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardController.swift; sourceTree = "<group>"; };
+		1B8472FE256F2E1600A27BAC /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		1B847305256F3A9C00A27BAC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1B847308256F3AB700A27BAC /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		1BBBEFC0255C9F1700937D70 /* AddCreditCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCreditCard.storyboard; sourceTree = "<group>"; };
 		1BBBEFC3255C9FF800937D70 /* AddCreditCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardVC.swift; sourceTree = "<group>"; };
 		1BCC6DA32543A48300A426B6 /* Movimentacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movimentacao.swift; sourceTree = "<group>"; };
@@ -68,6 +75,9 @@
 		1BCEFB2425439F1C005BB0C6 /* ExtratoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtratoCell.xib; sourceTree = "<group>"; };
 		1BE25411256895BB009059AF /* AddCreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardController.swift; sourceTree = "<group>"; };
 		1BE837662553874A005F162F /* AccountBalanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceController.swift; sourceTree = "<group>"; };
+		D47D50BDF06ED554D0C93A13 /* Pods-TabBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBar.debug.xcconfig"; path = "Target Support Files/Pods-TabBar/Pods-TabBar.debug.xcconfig"; sourceTree = "<group>"; };
+		DEF8263C6FB8CFEB4AAC7D6B /* Pods_TabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F299CA055FCBC8CA20006101 /* Pods-TabBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBar.release.xcconfig"; path = "Target Support Files/Pods-TabBar/Pods-TabBar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +85,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F03A182E82D73C011E33B79 /* Pods_TabBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19D97EA5148A8AE1DF6E4FF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEF8263C6FB8CFEB4AAC7D6B /* Pods_TabBar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1B103F612547858F009B4837 /* AccountBalance */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +127,8 @@
 		1B164A36255A069200B8C82B /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				1B847305256F3A9C00A27BAC /* LoadingView.swift */,
+				1B847308256F3AB700A27BAC /* LoadingView.xib */,
 				1B164A37255A06BB00B8C82B /* ButtonCollectionCell.swift */,
 				1B164A38255A06BB00B8C82B /* ButtonCollectionCell.xib */,
 			);
@@ -150,6 +171,8 @@
 			children = (
 				1BCEFB052543914B005BB0C6 /* TabBar */,
 				1BCEFB042543914B005BB0C6 /* Products */,
+				91E429E75D403C046BCC7DFA /* Pods */,
+				19D97EA5148A8AE1DF6E4FF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,8 +200,18 @@
 				1BCEFB0F2543914C005BB0C6 /* Assets.xcassets */,
 				1BCEFB112543914C005BB0C6 /* LaunchScreen.storyboard */,
 				1BCEFB142543914C005BB0C6 /* Info.plist */,
+				1B8472FE256F2E1600A27BAC /* loading.json */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		91E429E75D403C046BCC7DFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D47D50BDF06ED554D0C93A13 /* Pods-TabBar.debug.xcconfig */,
+				F299CA055FCBC8CA20006101 /* Pods-TabBar.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BCEFB172543914C005BB0C6 /* Build configuration list for PBXNativeTarget "TabBar" */;
 			buildPhases = (
+				39EE6F8D51D9836E743EB8A5 /* [CP] Check Pods Manifest.lock */,
 				1BCEFAFF2543914A005BB0C6 /* Sources */,
 				1BCEFB002543914A005BB0C6 /* Frameworks */,
 				1BCEFB012543914A005BB0C6 /* Resources */,
+				BE878CDA59D0C21F089DE34F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,6 +275,7 @@
 			files = (
 				1BCEFB132543914C005BB0C6 /* LaunchScreen.storyboard in Resources */,
 				1B164A3A255A06BB00B8C82B /* ButtonCollectionCell.xib in Resources */,
+				1B8472FF256F2E1600A27BAC /* loading.json in Resources */,
 				1BCEFB102543914C005BB0C6 /* Assets.xcassets in Resources */,
 				1B103F6625478655009B4837 /* CreditCardContainerCell.xib in Resources */,
 				1BCEFB0E2543914B005BB0C6 /* Main.storyboard in Resources */,
@@ -247,12 +283,55 @@
 				1BCEFB2625439F1C005BB0C6 /* ExtratoCell.xib in Resources */,
 				1BBBEFC1255C9F1700937D70 /* AddCreditCard.storyboard in Resources */,
 				1B103F6E25478C11009B4837 /* CreditCardCollectionCell.xib in Resources */,
+				1B847309256F3AB700A27BAC /* LoadingView.xib in Resources */,
 				1BCC6DA82543A7F600A426B6 /* despesas.json in Resources */,
 				1B22E64F254A4A6000DBC882 /* invoice.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39EE6F8D51D9836E743EB8A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TabBar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE878CDA59D0C21F089DE34F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TabBar/Pods-TabBar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TabBar/Pods-TabBar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TabBar/Pods-TabBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1BCEFAFF2543914A005BB0C6 /* Sources */ = {
@@ -276,6 +355,7 @@
 				1B103F712547911E009B4837 /* Cartoes.swift in Sources */,
 				1B164A39255A06BB00B8C82B /* ButtonCollectionCell.swift in Sources */,
 				1BCC6DA42543A48300A426B6 /* Movimentacao.swift in Sources */,
+				1B847306256F3A9C00A27BAC /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +499,7 @@
 		};
 		1BCEFB182543914C005BB0C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D47D50BDF06ED554D0C93A13 /* Pods-TabBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -438,6 +519,7 @@
 		};
 		1BCEFB192543914C005BB0C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F299CA055FCBC8CA20006101 /* Pods-TabBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

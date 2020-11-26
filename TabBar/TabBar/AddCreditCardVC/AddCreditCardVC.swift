@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 enum DateEnum: Int {
     case month = 0
     case year = 1
@@ -20,9 +19,11 @@ protocol AddCreditCardVCDelegte: class {
 
 class AddCreditCardVC: UIViewController {
     
+    // MARK: PROPERTIES
     var month: String?
     var year: String?
 
+    var loadingView: LoadingView? = UINib(nibName: "LoadingView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? LoadingView
     weak var delegate: AddCreditCardVCDelegte?
    
     @IBOutlet weak var nameTextField: UITextField!
@@ -43,6 +44,7 @@ class AddCreditCardVC: UIViewController {
     private var months: [String] = Calendar.current.monthSymbols
     private var years: [String] = []
     
+    // MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,6 +56,11 @@ class AddCreditCardVC: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer:)))
                 self.view.addGestureRecognizer(tapGesture)
+    
+        self.loadingView?.frame = self.view.frame
+        self.view.addSubview(self.loadingView ?? UIView())
+        self.loadingView?.showLoading()
+        
     }
     
     @objc private func viewTapped(gestureRecognizer: UIGestureRecognizer) {
@@ -140,6 +147,8 @@ class AddCreditCardVC: UIViewController {
         self.dateTextField.layer.cornerRadius = 4
     }
     
+    
+    // MARK: Actions
     @IBAction func tappedSelectFlagSegmented(_ sender: UISegmentedControl) {
     }
     
@@ -211,6 +220,8 @@ class AddCreditCardVC: UIViewController {
     
 }
 
+
+// MARK: UIImagePickerControllerDelegate
 extension AddCreditCardVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -225,6 +236,8 @@ extension AddCreditCardVC: UIImagePickerControllerDelegate, UINavigationControll
     }
 }
 
+
+// MARK: UITextFieldDelegate
 extension AddCreditCardVC: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -244,6 +257,7 @@ extension AddCreditCardVC: UITextFieldDelegate {
 }
 
 
+// MARK: UIPickerViewDataSource
 extension AddCreditCardVC: UIPickerViewDelegate, UIPickerViewDataSource {
    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
