@@ -38,6 +38,8 @@
 		1BCEFB2625439F1C005BB0C6 /* ExtratoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCEFB2425439F1C005BB0C6 /* ExtratoCell.xib */; };
 		1BE25412256895BB009059AF /* AddCreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE25411256895BB009059AF /* AddCreditCardController.swift */; };
 		1BE837672553874A005F162F /* AccountBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE837662553874A005F162F /* AccountBalanceController.swift */; };
+		1BFA12EC2571CC6E00260ED3 /* BaseViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA12EB2571CC6E00260ED3 /* BaseViewViewController.swift */; };
+		1BFA12F02571CDA400260ED3 /* CustomAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA12EF2571CDA400260ED3 /* CustomAnimationView.swift */; };
 		5F03A182E82D73C011E33B79 /* Pods_TabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF8263C6FB8CFEB4AAC7D6B /* Pods_TabBar.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		1BCEFB2425439F1C005BB0C6 /* ExtratoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtratoCell.xib; sourceTree = "<group>"; };
 		1BE25411256895BB009059AF /* AddCreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardController.swift; sourceTree = "<group>"; };
 		1BE837662553874A005F162F /* AccountBalanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceController.swift; sourceTree = "<group>"; };
+		1BFA12EB2571CC6E00260ED3 /* BaseViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewViewController.swift; sourceTree = "<group>"; };
+		1BFA12EF2571CDA400260ED3 /* CustomAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationView.swift; sourceTree = "<group>"; };
 		D47D50BDF06ED554D0C93A13 /* Pods-TabBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBar.debug.xcconfig"; path = "Target Support Files/Pods-TabBar/Pods-TabBar.debug.xcconfig"; sourceTree = "<group>"; };
 		DEF8263C6FB8CFEB4AAC7D6B /* Pods_TabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F299CA055FCBC8CA20006101 /* Pods-TabBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBar.release.xcconfig"; path = "Target Support Files/Pods-TabBar/Pods-TabBar.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		1BCEFB052543914B005BB0C6 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				1BFA12E92571CC3800260ED3 /* BaseView */,
 				1BBBEFC6255CA00300937D70 /* AddCreditCardVC */,
 				1B164A36255A069200B8C82B /* CustomView */,
 				1B103F612547858F009B4837 /* AccountBalance */,
@@ -203,6 +208,15 @@
 				1B8472FE256F2E1600A27BAC /* loading.json */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		1BFA12E92571CC3800260ED3 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				1BFA12EB2571CC6E00260ED3 /* BaseViewViewController.swift */,
+				1BFA12EF2571CDA400260ED3 /* CustomAnimationView.swift */,
+			);
+			path = BaseView;
 			sourceTree = "<group>";
 		};
 		91E429E75D403C046BCC7DFA /* Pods */ = {
@@ -340,6 +354,7 @@
 			files = (
 				1BE837672553874A005F162F /* AccountBalanceController.swift in Sources */,
 				1B22E647254A3BB200DBC882 /* InvoiceVC.swift in Sources */,
+				1BFA12EC2571CC6E00260ED3 /* BaseViewViewController.swift in Sources */,
 				1B5122C7255634C300C55FCE /* CreditCardController.swift in Sources */,
 				1B22E652254A549600DBC882 /* Invoice.swift in Sources */,
 				1B103F6D25478C11009B4837 /* CreditCardCollectionCell.swift in Sources */,
@@ -351,6 +366,7 @@
 				1BCEFB1C25439617005BB0C6 /* AccountBalanceVC.swift in Sources */,
 				1B164A322559FD4D00B8C82B /* InvoiceController.swift in Sources */,
 				1BCEFB092543914B005BB0C6 /* SceneDelegate.swift in Sources */,
+				1BFA12F02571CDA400260ED3 /* CustomAnimationView.swift in Sources */,
 				1BE25412256895BB009059AF /* AddCreditCardController.swift in Sources */,
 				1B103F712547911E009B4837 /* Cartoes.swift in Sources */,
 				1B164A39255A06BB00B8C82B /* ButtonCollectionCell.swift in Sources */,

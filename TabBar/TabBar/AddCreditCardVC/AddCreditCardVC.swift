@@ -17,24 +17,20 @@ protocol AddCreditCardVCDelegte: class {
     func success(value: CartoesElement?)
 }
 
-class AddCreditCardVC: UIViewController {
+class AddCreditCardVC: BaseViewViewController {
     
     // MARK: PROPERTIES
     var month: String?
     var year: String?
 
-    var loadingView: LoadingView? = UINib(nibName: "LoadingView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? LoadingView
+    //var loadingView: LoadingView? = UINib(nibName: "LoadingView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? LoadingView
     weak var delegate: AddCreditCardVCDelegte?
    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var numberCardTextField: UITextField!
-    
     @IBOutlet weak var dateTextField: UITextField!
-    
     @IBOutlet weak var flagSegmented: UISegmentedControl!
-    
     @IBOutlet weak var photoButton: UIButton!
-    
     @IBOutlet weak var saveButton: UIButton!
     
     private var controller: AddCreditCardController = AddCreditCardController()
@@ -57,9 +53,12 @@ class AddCreditCardVC: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer:)))
                 self.view.addGestureRecognizer(tapGesture)
     
+        
+        self.showLoading()
+        /*
         self.loadingView?.frame = self.view.frame
         self.view.addSubview(self.loadingView ?? UIView())
-        self.loadingView?.showLoading()
+        self.loadingView?.showLoading()*/
         
     }
     
