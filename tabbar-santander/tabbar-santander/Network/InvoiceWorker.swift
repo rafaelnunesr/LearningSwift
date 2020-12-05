@@ -8,9 +8,10 @@
 import Foundation
 
 
-class InvoiceWorker {
-    
-    typealias completion <T> = (_ result: T, _ failure: String?) -> Void
+import Foundation
+
+
+class InvoiceWorker: GenericWorker {
     
     func getInvoice(cardID: String, completion: @escaping completion<CardListElement?>) {
         

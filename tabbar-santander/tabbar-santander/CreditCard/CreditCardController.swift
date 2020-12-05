@@ -10,26 +10,19 @@ import Foundation
 class CreditCardController {
     
     private var cartoes: Cartoes?
-    
     private var isReloadCollection: Bool = false
+    private var worker: CreditCardWorker = CreditCardWorker()
     
-    func loadCreditCard(completionHandler: (_ result: Bool,  _ error: Error?) -> Void) {
+    func getCreditCards( completionHandler: @escaping (_ result: Bool, _ error: String?) -> Void) {
+
+        self.worker.getCreditCards { (success, error) in
         
-        if let path = Bundle.main.path(forResource: "cartoes", ofType: "json"){
-            
-            do {
+            if let _success = success {
                 
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                
-                let cartoes = try JSONDecoder().decode(Cartoes.self, from: data)
-                
-                print("=======>cartoes\(cartoes)")
-                self.cartoes = cartoes
-                completionHandler(true, nil)
-                
-            }catch{
-                print("Deu ruim no parse")
-                completionHandler(false, error)
+                self.cartoes = _success
+                completionHandler(true,nil)
+            }else{
+                completionHandler(false,error)
             }
         }
     }
