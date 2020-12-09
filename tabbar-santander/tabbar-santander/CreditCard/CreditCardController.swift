@@ -10,19 +10,19 @@ import Foundation
 class CreditCardController {
     
     private var cartoes: Cartoes?
-    private var isReloadCollection: Bool = false
-    private var worker: CreditCardWorker = CreditCardWorker()
     
-    func getCreditCards( completionHandler: @escaping (_ result: Bool, _ error: String?) -> Void) {
-
-        self.worker.getCreditCards { (success, error) in
+    private var isReloadCollection: Bool = false
+    
+    func loadCreditCard(completionHandler: @escaping (_ result: Bool, _ error: String?) -> Void)  {
+        
+        CartoesWorker().getCartoes { (success, error) in
         
             if let _success = success {
                 
                 self.cartoes = _success
-                completionHandler(true,nil)
+                completionHandler(true, nil)
             }else{
-                completionHandler(false,error)
+                completionHandler(false,"")
             }
         }
     }
