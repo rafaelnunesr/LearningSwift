@@ -38,7 +38,7 @@ class AccountBalanceVC: BaseViewController {
                 
                 DispatchQueue.main.async {
                     self.hiddenLoading()
-                    
+                    self.showError(error: error, preferredStyle: .alert)
                 }
                 
                 print("======deu erro \(error)")
