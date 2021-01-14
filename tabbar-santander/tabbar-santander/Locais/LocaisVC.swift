@@ -107,7 +107,11 @@ extension LocaisVC: MKMapViewDelegate {
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
-            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            //view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            
+            let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 30, height: 30)))
+            mapsButton.setBackgroundImage(UIImage(named: "map-icon"), for: .normal)
+            view.rightCalloutAccessoryView = mapsButton
         }
         
         return view
