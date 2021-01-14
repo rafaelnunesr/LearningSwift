@@ -22,7 +22,7 @@ class AccountBalanceController {
         
     }
 
-    func loadLancamentos( completionHandler: @escaping (_ result: Bool, _ error: ErrorHandler?) -> Void) {
+    func loadLancamentos( completionHandler: @escaping (_ result: Bool, _ error: String?) -> Void) {
 
         self.worker.getLancamentos { (success, error) in
         
@@ -31,7 +31,7 @@ class AccountBalanceController {
                 self.arrayLancamentos = _success
                 completionHandler(true,nil)
             }else{
-                completionHandler(false, error)
+                completionHandler(false,"")
             }
         }
     }

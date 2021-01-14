@@ -17,19 +17,20 @@ class BaseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
     func showError(error: ErrorHandler?, preferredStyle: UIAlertController.Style) {
         
         let alert = UIAlertController(title: error?.title, message: error?.errorDescription, preferredStyle: preferredStyle)
         
-        let button = UIAlertAction(title: "ok", style: .default) { (action) in
+        let button = UIAlertAction(title: "OK", style: .default) { (action) in
             alert.dismiss(animated: true, completion: nil)
         }
         
         alert.addAction(button)
         
         self.present(alert, animated: true, completion: nil)
-        
     }
+    
     
     func showLoading() {
         

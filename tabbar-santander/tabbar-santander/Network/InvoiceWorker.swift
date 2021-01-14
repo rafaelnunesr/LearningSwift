@@ -45,7 +45,7 @@ class InvoiceWorker: GenericWorker {
                         print(error)
                     }
                     
-                }else {
+                }else{
                     completion(nil, ErrorHandler(title: "Error", description: response.error?.errorDescription, code: response.error?.responseCode))
                 }
             }

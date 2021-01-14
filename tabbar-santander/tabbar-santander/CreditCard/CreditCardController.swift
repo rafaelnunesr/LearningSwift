@@ -13,7 +13,7 @@ class CreditCardController {
     
     private var isReloadCollection: Bool = false
     
-    func loadCreditCard(completionHandler: @escaping (_ result: Bool, _ error: ErrorHandler?) -> Void)  {
+    func loadCreditCard(completionHandler: @escaping (_ result: Bool, _ error: String?) -> Void)  {
         
         CartoesWorker().getCartoes { (success, error) in
         
@@ -22,7 +22,7 @@ class CreditCardController {
                 self.cartoes = _success
                 completionHandler(true, nil)
             }else{
-                completionHandler(false, error)
+                completionHandler(false,"")
             }
         }
     }
