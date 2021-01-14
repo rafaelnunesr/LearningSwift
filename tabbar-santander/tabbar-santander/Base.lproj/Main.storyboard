@@ -114,6 +114,22 @@
             </objects>
             <point key="canvasLocation" x="3217" y="69"/>
         </scene>
+        <!--Map DetailsVC-->
+        <scene sceneID="kwX-cz-CYz">
+            <objects>
+                <viewController id="qQi-yW-0Rb" customClass="MapDetailsVC" customModule="tabbar_santander" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UpL-Mu-d5E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ODZ-zR-xG4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ucd-hS-xeq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nwj-NJ-sE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3478" y="-625"/>
+        </scene>
         <!--AddCreditCard-->
         <scene sceneID="LbL-nT-PGR">
             <objects>
@@ -190,6 +206,7 @@
                     <navigationItem key="navigationItem" id="Qpg-oG-iE5"/>
                     <connections>
                         <outlet property="myMapView" destination="KDN-vS-B52" id="u4D-65-nT3"/>
+                        <segue destination="qQi-yW-0Rb" kind="show" identifier="mapsDetails" id="Cp8-mZ-qIz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trC-lb-lPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

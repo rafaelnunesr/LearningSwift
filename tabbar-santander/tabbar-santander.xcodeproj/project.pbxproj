@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B5B976725AFCFE800006500 /* MapDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B976625AFCFE800006500 /* MapDetailsVC.swift */; };
 		33EFBE3ED44F194943941E3F /* Pods_tabbar_santander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F919520EB32845EF480E14 /* Pods_tabbar_santander.framework */; };
 		B215BFD025ACD733009DC43E /* Locais.json in Resources */ = {isa = PBXBuildFile; fileRef = B215BFCF25ACD733009DC43E /* Locais.json */; };
 		B215BFD425ACD827009DC43E /* Locais.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215BFD325ACD827009DC43E /* Locais.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		17F919520EB32845EF480E14 /* Pods_tabbar_santander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tabbar_santander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B5B976625AFCFE800006500 /* MapDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailsVC.swift; sourceTree = "<group>"; };
 		2A985F4BF1C839CD02A718FF /* Pods-tabbar-santander.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabbar-santander.release.xcconfig"; path = "Target Support Files/Pods-tabbar-santander/Pods-tabbar-santander.release.xcconfig"; sourceTree = "<group>"; };
 		6858B30A71EB311E170CD740 /* Pods-tabbar-santander.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabbar-santander.debug.xcconfig"; path = "Target Support Files/Pods-tabbar-santander/Pods-tabbar-santander.debug.xcconfig"; sourceTree = "<group>"; };
 		B215BFCF25ACD733009DC43E /* Locais.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Locais.json; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				B215BFD925ACDAB1009DC43E /* LocaisVC.swift */,
+				1B5B976625AFCFE800006500 /* MapDetailsVC.swift */,
 			);
 			path = Locais;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B26477212547864F00EBED3B /* CreditCardContainerCell.swift in Sources */,
+				1B5B976725AFCFE800006500 /* MapDetailsVC.swift in Sources */,
 				B26E323725439EF00093CACA /* ExtratoCell.swift in Sources */,
 				B27A0895257B137B00CD9907 /* CartoesWorker.swift in Sources */,
 				B264772925478BF900EBED3B /* CreditCardCollectionCell.swift in Sources */,
