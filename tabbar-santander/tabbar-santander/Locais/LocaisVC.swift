@@ -25,7 +25,6 @@ class LocaisVC: BaseViewController {
         self.myMapView.addAnnotation(agencia)
         
         if let locais = self.loadInitialData() {
-            
             self.myMapView.addAnnotations(locais.agencias)
         }
         
@@ -45,7 +44,6 @@ class LocaisVC: BaseViewController {
         self.locationManager.startUpdatingLocation()
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            
             self.myMapView.showsUserLocation = true
         }else{
             locationManager.requestWhenInUseAuthorization()
@@ -66,7 +64,6 @@ class LocaisVC: BaseViewController {
             }catch {
                 
             }
-            
         }
         
         return nil
@@ -74,17 +71,14 @@ class LocaisVC: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         self.checkLocationAuthorizationStatus()
     }
-    
     
 }
 
 extension LocaisVC: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
         self.checkLocationAuthorizationStatus()
     }
 }
@@ -96,7 +90,6 @@ extension LocaisVC: MKMapViewDelegate {
         guard let annotation = annotation as? Agencia else { return nil }
         
         let identifier = "marker"
-        
         let view: MKMarkerAnnotationView
         
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
@@ -107,6 +100,7 @@ extension LocaisVC: MKMapViewDelegate {
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
+            // button with i icon
             //view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             
             let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 30, height: 30)))
@@ -127,14 +121,15 @@ extension LocaisVC: MKMapViewDelegate {
         
         print("\(view.annotation?.title) foi clicado")
         
-        performSegue(withIdentifier: "mapsDetails", sender: view.annotation?.title)
+        performSegue(withIdentifier: "DetailLocaisVC", sender: view.annotation)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let vc: MapDetailsVC? = segue.destination as? MapDetailsVC
-           vc?.labelData = sender as? String
-        vc?.setup()
+        if let vc: DetailLocaisVC = segue.destination as? DetailLocaisVC, let annotation: MKAnnotation = sender as? MKAnnotation {
+            
+            vc.annotationSelected = annotation
+        }
     }
     
 }
