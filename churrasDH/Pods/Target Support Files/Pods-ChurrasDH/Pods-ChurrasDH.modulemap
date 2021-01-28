@@ -1,0 +1,6 @@
+framework module Pods_ChurrasDH {
+  umbrella header "Pods-ChurrasDH-umbrella.h"
+
+  export *
+  module * { export * }
+}
