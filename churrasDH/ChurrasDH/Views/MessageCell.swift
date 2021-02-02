@@ -14,9 +14,13 @@ class MessageCell: UITableViewCell {
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var profileImageUser: UIImageView!
     
+    @IBOutlet weak var friendUserImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         messageBubble.layer.cornerRadius = 20
+        profileImageUser.layer.cornerRadius = 20
+        friendUserImageView.layer.cornerRadius = 20
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

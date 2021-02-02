@@ -72,6 +72,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jt7-ra-HuE"/>
+                    <connections>
+                        <segue destination="viZ-EA-MSG" kind="show" identifier="WelcomeToChat" id="IwX-gg-qH1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -287,7 +290,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7PQ-AK-XlM"/>
+        <segue reference="IwX-gg-qH1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="fogo" width="197" height="256"/>

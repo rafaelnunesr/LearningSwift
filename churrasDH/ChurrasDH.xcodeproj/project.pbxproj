@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		085CC027D396910101A9A5A1 /* Pods_ChurrasDH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB998A47569DB91D0538FAA /* Pods_ChurrasDH.framework */; };
+		1BDB194F25C8BD590061932D /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB194E25C8BD590061932D /* UserDefaultsHelper.swift */; };
+		1BDB197825C8CB3C0061932D /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BDB197625C8CB3C0061932D /* DataModel.xcdatamodeld */; };
 		AB41246C25C217FE0058897F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41246B25C217FE0058897F /* AppDelegate.swift */; };
 		AB41246E25C217FE0058897F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41246D25C217FE0058897F /* SceneDelegate.swift */; };
 		AB41247025C217FE0058897F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41246F25C217FE0058897F /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BDB194E25C8BD590061932D /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		1BDB197725C8CB3C0061932D /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		7D7D1C35AD10011E5E2153A7 /* Pods-ChurrasDH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChurrasDH.debug.xcconfig"; path = "Target Support Files/Pods-ChurrasDH/Pods-ChurrasDH.debug.xcconfig"; sourceTree = "<group>"; };
 		971B3F842F5451D08BE9788C /* Pods-ChurrasDH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChurrasDH.release.xcconfig"; path = "Target Support Files/Pods-ChurrasDH/Pods-ChurrasDH.release.xcconfig"; sourceTree = "<group>"; };
 		AB41246825C217FE0058897F /* ChurrasDH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChurrasDH.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BDB194D25C8BD440061932D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1BDB194E25C8BD590061932D /* UserDefaultsHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		58A9C9F34344912A6B6F3F2A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +108,7 @@
 		AB41246A25C217FE0058897F /* ChurrasDH */ = {
 			isa = PBXGroup;
 			children = (
+				1BDB194D25C8BD440061932D /* Helper */,
 				AB41248225C218520058897F /* Controllers */,
 				AB41248125C2184B0058897F /* Models */,
 				AB41248025C218430058897F /* Views */,
@@ -124,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4124A025C248320058897F /* Message.swift */,
+				1BDB197625C8CB3C0061932D /* DataModel.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -255,6 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BDB197825C8CB3C0061932D /* DataModel.xcdatamodeld in Sources */,
+				1BDB194F25C8BD590061932D /* UserDefaultsHelper.swift in Sources */,
 				AB41247025C217FE0058897F /* ViewController.swift in Sources */,
 				AB41246C25C217FE0058897F /* AppDelegate.swift in Sources */,
 				AB41246E25C217FE0058897F /* SceneDelegate.swift in Sources */,
@@ -465,6 +481,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1BDB197625C8CB3C0061932D /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1BDB197725C8CB3C0061932D /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 1BDB197725C8CB3C0061932D /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AB41246025C217FE0058897F /* Project object */;
 }

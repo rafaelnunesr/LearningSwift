@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
                 if let e = error {
                     print(e)
                 } else {
+                    UserDefaultsHelper.saveLoggedUser()
                     self.performSegue(withIdentifier: "LoginToChat", sender: self)
                 }
             }

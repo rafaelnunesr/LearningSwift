@@ -19,17 +19,24 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vxK-XS-jkj">
                         <rect key="frame" x="10" y="10" width="456" height="138"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cms-NY-hCt">
+                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="1cA-B1-zPr"/>
+                                    <constraint firstAttribute="height" constant="45" id="Bdw-MI-cdo"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vws-Qx-ZW1">
-                                <rect key="frame" x="0.0" y="0.0" width="408" height="136"/>
+                                <rect key="frame" x="53" y="0.0" width="355" height="136"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdl-OX-u9Z">
-                                        <rect key="frame" x="10" y="10" width="388" height="85.5"/>
+                                        <rect key="frame" x="10" y="10" width="335" height="85.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWw-bF-7Of">
-                                        <rect key="frame" x="10" y="105.5" width="388" height="20.5"/>
+                                        <rect key="frame" x="10" y="105.5" width="335" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -47,7 +54,7 @@
                                     <constraint firstItem="KWw-bF-7Of" firstAttribute="leading" secondItem="Vws-Qx-ZW1" secondAttribute="leading" constant="10" id="fc3-pz-1yS"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gwD-sb-s4j">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gwD-sb-s4j">
                                 <rect key="frame" x="412" y="0.0" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="ObZ-0W-UXH"/>
@@ -70,6 +77,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="friendUserImageView" destination="Cms-NY-hCt" id="HgE-aq-0Tv"/>
                 <outlet property="messageBubble" destination="Vws-Qx-ZW1" id="RKm-Fd-U16"/>
                 <outlet property="messageLabel" destination="Tdl-OX-u9Z" id="e3a-gE-NUJ"/>
                 <outlet property="profileImageUser" destination="gwD-sb-s4j" id="lw2-Zi-2cK"/>
