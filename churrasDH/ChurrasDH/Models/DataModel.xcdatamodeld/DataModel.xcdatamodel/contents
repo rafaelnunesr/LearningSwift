@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CoreUser" representedClassName=".CoreUser" syncable="YES" codeGenerationType="class">
         <attribute name="email" attributeType="String"/>
-        <attribute name="photoURL" optional="YES" attributeType="String"/>
+        <attribute name="photoData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="uid" attributeType="String"/>
     </entity>
     <elements>

@@ -8,6 +8,7 @@ target 'ChurrasDH' do
   # Pods for ChurrasDH
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
   pod 'IQKeyboardManagerSwift'
 
 end

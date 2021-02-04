@@ -4,10 +4,10 @@
 //
 //  Created by Rodrigo Santos on 27/01/21.
 //
-
 import UIKit
 import Firebase
 import FirebaseFirestore
+import FirebaseStorage
 import CoreData
 
 class ChatViewController: UIViewController {
@@ -18,6 +18,8 @@ class ChatViewController: UIViewController {
     var messages: [Message] = []
     
     let db = Firestore.firestore()
+    var userImage: UIImage = UIImage(named: "fogo")!
+    var currentUser: CoreUser?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,32 @@ class ChatViewController: UIViewController {
         navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
         loadMessages()
+        loadCurrentUser()
+    }
+    
+    private func loadCurrentUser() {
+        self.currentUser = getCurrentUser()
+        
+        if let imageData = currentUser?.photoData {
+            if let image = UIImage(data: imageData) {
+                self.userImage = image
+            }
+        }
+    }
+    
+    @IBAction func addPhoto(_ sender: UIBarButtonItem) {
+        self.getImage(fromSourceType: .photoLibrary)
+    }
+    
+    private func getImage(fromSourceType sourceType: UIImagePickerController.SourceType) {
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            let imagePickerController = UIImagePickerController()
+            
+            imagePickerController.delegate = self
+            imagePickerController.sourceType = sourceType
+            
+            self.present(imagePickerController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func logoutUser(_ sender: UIBarButtonItem) {
@@ -49,35 +77,29 @@ class ChatViewController: UIViewController {
             
             self.persistData(messageText: messageText, messageSender: messageSender)
             
-            // BUSCAR NO FIREBASE
-            /*
-            db.collection("users").whereField("userUID", isEqualTo: userUID).getDocuments{ (querySnapshot, error) in
-                if let e = error {
-                    print(e)
-                }else {
-                    if let snapshotDocs = querySnapshot?.documents {
-                        for doc in snapshotDocs {
-                            print(doc.data())
-                            //let data = doc.data()
-                            
-                            self.persistData(messageText: messageText, messageSender: messageSender)
-                            
-            //                            if let username = data["username"] as? String {
-            //                                self.persistData(messageText: messageText, messageSender: username)
-            //                            }
-                        }
-                    }
-                }
-            }
-            */
-
+//            db.collection("users").whereField("userUID", isEqualTo: userUID).getDocuments { (querySnapshot, error) in
+//                if let e = error {
+//                    print(e)
+//                } else {
+//                    if let snapshotDocs = querySnapshot?.documents {
+//                        print("Quantidade de usuarios \(snapshotDocs.count)")
+//
+//                        for doc in snapshotDocs {
+//                            print(doc.data())
+////                            let data = doc.data()
+//
+//                            self.persistData(messageText: messageText, messageSender: messageSender)
+//                        }
+//                    }
+//                }
+//            }
+            
         }
     }
     
     private func getCurrentUserUID() -> String {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        // busca os dados no banco de dados 
         let request: NSFetchRequest<CoreUser> = CoreUser.fetchRequest()
         
         var userUID = ""
@@ -137,8 +159,88 @@ class ChatViewController: UIViewController {
             }
         }
     }
+    /*
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
+}
 
+extension ChatViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        guard let localImage = info[.originalImage] as? UIImage else { return }
+        
+        guard let imageData: Data = localImage.jpegData(compressionQuality: 0.5) else { return }
+        
+        self.persistPhoto(imageData: imageData)
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    private func persistPhoto(imageData: Data) {
+        // Persistir a imagem no Firebase Storage
+        let storageRef = Storage.storage().reference()
+        
+        let storageMetaData = StorageMetadata()
+        storageMetaData.contentType = "image/png"
+        
+//        let ref = storageRef.child("imagemTeste")
+        let ref = storageRef.child("imagens/imagemTeste")
+        print(ref.root())
+        print(ref.parent())
+        
+        ref.putData(imageData, metadata: storageMetaData) { (url, error) in
+            if error == nil {
+                ref.downloadURL { (url, error) in
+                    print("URL da imagem \(String(describing: url))")
+                    // Salvar a imagem no CoreData
+                    self.persistCoreData(imageData: imageData)
+                }
+            }
+        }
+    }
+    
+    private func persistCoreData(imageData: Data) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        // Atualizar a foto do usuario corrente
+        guard let currentUser = getCurrentUser() else { return }
+        
+        currentUser.setValue(imageData, forKey: "photoData")
+        
+        do {
+            try context.save()
+            
+            // Atualizar celulas da tableview com a nova foto
+            if let image = UIImage(data: imageData) {
+                self.userImage = image
+            }
+            self.tableView.reloadData()
+        } catch {
+            print("Erro ao atualizar a foto \(error)")
+        }
+        
+    }
+    
+    private func getCurrentUser() -> CoreUser? {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let request: NSFetchRequest<CoreUser> = CoreUser.fetchRequest()
+        
+        do {
+            let users = try context.fetch(request)
+            return users.first ?? nil
+        } catch {
+            print("Erro ao buscar usuario \(error)")
+        }
+        return nil
+    }
+    
 }
 
 extension ChatViewController: UITableViewDataSource {
@@ -149,12 +251,24 @@ extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = messages[indexPath.row]
         
-//        message.sender
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! MessageCell
         
         cell.messageLabel.text = message.messageLabel
+        
+        // Identificar o autor da mensagem
+        
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.friendUserImageView.isHidden = true
+            cell.profileImageUser.isHidden = false
+            cell.profileImageUser.image = self.userImage
+            cell.messageBubble.backgroundColor = UIColor(red: 192.0/255.0, green: 38.0/255.0, blue: 42.0/255.0, alpha: 1.0)
+        } else {
+            cell.friendUserImageView.isHidden = false
+            cell.profileImageUser.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(red: 35.0/255.0, green: 2.0/255.0, blue: 2.0/255.0, alpha: 1.0)
+            cell.messageLabel.textColor = UIColor.yellow
+        }
+        
         return cell
     }
 }
-
