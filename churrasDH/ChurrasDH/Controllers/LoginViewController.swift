@@ -22,6 +22,30 @@ class LoginViewController: UIViewController {
                 if let e = error {
                     print(e)
                 } else {
+                    print(authResult?.user.uid)
+                    
+                    
+                    let currentUser = User.getCurrentUser()
+                    
+                    if currentUser == nil {
+                        // Precisamos salvar o usuário no CoreData
+                        
+                        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                        
+                        let user = CoreUser(context: context)
+                        
+                        if let userUID = authResult?.user.uid {
+                            user.uid = userUID
+                            user.email = email
+                        }
+                        
+                        do {
+                            try context.save()
+                        } catch {
+                            print("erro ao salvar o usuario no login \(error)")
+                        }
+                    }
+                    
                     UserDefaultsHelper.saveLoggedUser()
                     self.performSegue(withIdentifier: "LoginToChat", sender: self)
                 }

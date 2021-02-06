@@ -2,12 +2,12 @@
 //  UserDefaultsHelper.swift
 //  ChurrasDH
 //
-//  Created by Rafael Nunes Rios on 2/1/21.
+//  Created by Rodrigo Santos on 01/02/21.
 //
 
 import Foundation
 
-class UserDefaultsHelper{
+class UserDefaultsHelper {
     static var defaults = UserDefaults.standard
     
     static func userIsLogged() -> Bool {
@@ -18,7 +18,7 @@ class UserDefaultsHelper{
         defaults.set(true, forKey: "isLogged")
     }
     
-    static func loggoutUser() {
+    static func logoutUser() {
         defaults.set(false, forKey: "isLogged")
     }
 }

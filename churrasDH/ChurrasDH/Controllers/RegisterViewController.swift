@@ -24,8 +24,6 @@ class RegisterViewController: UIViewController {
                     print(e)
                 } else {
                     // Navegar pra tela do chat
-                    
-                    // acessar variavel do AppDelegate
                     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                     
                     let user = CoreUser(context: context)
@@ -34,13 +32,13 @@ class RegisterViewController: UIViewController {
                         user.uid = userUID
                         user.email = email
                     }
-
-                    // salvar usuario no coredata
+                    
                     do {
                         try context.save()
-                    } catch  {
-                        print(error)
+                    } catch {
+                        print("erro ao salvar o usuario \(error)")
                     }
+                    
                     
                     UserDefaultsHelper.saveLoggedUser()
                     self.performSegue(withIdentifier: "RegisterToChat", sender: self)
