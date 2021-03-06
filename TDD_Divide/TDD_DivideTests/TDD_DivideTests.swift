@@ -32,5 +32,26 @@ class TDD_DivideTests: XCTestCase {
             XCTAssert(error?.domain == "Error dividing by Zero", "Error message should be 'Error dividing by Zero'")
         }
     }
+    
+    func testDivisionTime() {
+        measure {
+            self.calculatorBrain.divideTwoNumbers(dividend: 10, divisor: 2) { (result, error) in
+                
+            }
+        }
+    }
+    
+    func testCalculateDivisionByZero() {
+        
+        let exp  = expectation(description: "Expect callback from function")
+        
+        calculatorBrain.divideTwoNumbers(dividend: 10, divisor: 0) { (result, error) in
+            XCTAssertNil(result, "Result must be nil")
+            XCTAssert(error?.domain == "Error dividing by Zero", "Error message should be 'Error dividing by Zero'")
+            exp.fulfill() // expectation happened
+        }
+        
+        waitForExpectations(timeout: 3, handler: nil)
+    }
 
 }

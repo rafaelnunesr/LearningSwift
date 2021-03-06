@@ -21,6 +21,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculateButton(_ sender: UIButton) {
+        
+        guard let firstNumber = firstNumberTextField.text, let secondNumber = secondNumberTextField.text else { return }
+        
+        calculatorBrain.divideTwoNumbers(dividend: Float(firstNumber)!, divisor: Float(secondNumber)!) { (result, error) in
+            
+            if error == nil && result != nil {
+                self.resultTextField.text = String(result!)
+            }else {
+                
+            }
+            
+        }
+        
     }
     
 }
